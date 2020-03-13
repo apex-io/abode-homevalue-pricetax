@@ -1,5 +1,10 @@
+# config file for database
 database/config.js
 # node modules
 node_modules/
 # test coverage
 coverage/
+# transpiled file
+public/bundledIndex.js
+# fake data
+addressTableData.txt
