@@ -1,3 +1,104 @@
+"\N"	33168 Amiya Via William Street, Demarcoville, Nevada, 45232-7711 	true	6088	3	10	
+"\N"	6474 Daphnee Point Alessandro Rue, North Tyra, Illinois, 40507-9676 	false	1281	4	3	
+"\N"	93914 Jacobson Mountain Lowe Ports, Kesslershire, Tennessee, 97152-3470 	true	2922	6	8	
+"\N"	255 Thiel Hills Kessler Squares, Isabellville, Oregon, 33329 	true	5055	4	1	
+"\N"	1055 Grady Turnpike Leola Dam, Corwinberg, Delaware, 61787 	false	1685	9	2	
+"\N"	866 Prosacco Spurs Lynch Ville, Rubyside, Missouri, 02747-5280 	false	6004	6	8	
+"\N"	2368 Brown Junction Altenwerth Landing, New Sigridland, Minnesota, 42283 	true	5831	4	10	
+"\N"	4872 Gleichner Station Kuphal Roads, Mabelleside, Missouri, 68680 	true	6391	1	2	
+"\N"	6511 Merle Shore Jermain Wells, South Lillafurt, New Hampshire, 24463 	false	2804	1	8	
+"\N"	5329 Schneider Cliffs Reichert Station, Port Caryfort, Delaware, 59627-9864 	false	2837	6	9	
+"\N"	83362 Cassandre Via Hermiston Squares, Rempelburgh, Idaho, 04275-7008 	false	4805	2	5	
+"\N"	9461 Altenwerth Key Abner Place, New Linaton, New York, 83859 	true	1385	5	5	
+"\N"	597 Padberg Drives Julien Spur, Port Eddmouth, South Dakota, 25694-3725 	false	2678	4	7	
+"\N"	696 Martine Island Willms Manors, Lake Brennan, Massachusetts, 05369 	false	3792	9	3	
+"\N"	38228 Rolfson Ford McCullough Court, South Liamouth, Texas, 62642-0955 	true	2049	0	1	
+"\N"	1068 Terrence Trail Mitchel Mall, Murrayshire, Kentucky, 45403 	true	1297	3	3	
+"\N"	0074 Robyn Street Joseph Plains, New Neilbury, Delaware, 99149-1506 	false	4126	8	7	
+"\N"	189 Jamaal Place Erling Burgs, West Alexandre, Nebraska, 87351-2070 	false	6837	7	3	
+"\N"	0978 Legros Camp Deron Inlet, West Jamison, Pennsylvania, 75489-7361 	true	2491	7	2	
+"\N"	36365 Schuster Coves Wilford Streets, Karifurt, Arizona, 81115 	false	4185	3	8	
+"\N"	16258 Schneider Springs Kutch Spur, New Aubreeside, Mississippi, 60624 	true	3307	9	4	
+"\N"	743 Medhurst Rest Zackary Ville, Cassinborough, North Carolina, 17255-0379 	false	4720	10	10	
+"\N"	3489 Grayce Grove Leatha Lane, Tellyside, Delaware, 94757-0959 	true	3169	4	1	
+"\N"	067 Lehner Walk Bria Walk, Connfort, Connecticut, 04228-6304 	false	5654	2	4	
+"\N"	759 Johns Burgs Powlowski Divide, North Mckenna, Vermont, 12567-6201 	false	652	2	2	
+"\N"	82967 Rashawn Valleys Joanny Lock, Lawsonview, West Virginia, 10270-3279 	true	6045	0	9	
+"\N"	5100 Weber Place Queen Track, Buckridgeville, Michigan, 62017 	true	2776	8	10	
+"\N"	99304 Colin Cape Kutch Prairie, Lake Cathrinefort, Missouri, 08541-0428 	true	746	8	7	
+"\N"	36925 Jarred Summit Dejuan Mill, East Noemy, Illinois, 26829-6721 	false	2351	2	4	
+"\N"	8573 Marley Keys Borer Landing, New Gladyceside, Hawaii, 36160-1964 	false	345	0	3	
+"\N"	7910 Nikita Inlet O'Reilly Spur, Ortizborough, North Carolina, 32824-4141 	true	5763	5	7	
+"\N"	632 Paucek Square Batz Circle, Gleasonland, New Hampshire, 77657 	false	6332	5	5	
+"\N"	584 Rath Locks Bradtke Village, West Trinityberg, Minnesota, 76819 	true	6418	10	6	
+"\N"	043 Ahmed Light Ocie Trafficway, Port Elnora, Florida, 07961-8542 	false	2682	6	8	
+"\N"	25165 Corkery Parkways Schiller Path, Handbury, Montana, 43033-6414 	true	375	2	6	
+"\N"	4680 Hauck Drive Gunnar Freeway, South Coltberg, Texas, 12404 	false	6030	9	6	
+"\N"	496 Halvorson River Lesly Mall, Patriciatown, Minnesota, 90295-3464 	false	4550	4	4	
+"\N"	345 Daphney Terrace Alyson Shoals, Christiansenmouth, New Mexico, 53200 	true	1594	8	9	
+"\N"	035 Lubowitz Grove Cassin Road, Karleyshire, North Dakota, 28223 	false	5563	7	4	
+"\N"	234 Gleason Plains Hessel Land, Herzogton, Arizona, 13270 	false	6843	1	3	
+"\N"	327 Jenifer View Adriel Camp, Lake Jana, Delaware, 47748 	true	6189	1	3	
+"\N"	6462 Hackett Heights Jerel Track, Lake Larry, Utah, 97851-1726 	true	4881	5	8	
+"\N"	6683 Ritchie Forge Cloyd Divide, Millsview, Virginia, 63107 	true	1280	5	8	
+"\N"	29152 Allison Ports Lang Hill, Port Claratown, Virginia, 76767-6465 	false	4327	5	7	
+"\N"	5059 Jacobs Isle Cleve Center, Haleychester, Hawaii, 16900 	true	782	3	3	
+"\N"	33726 Lorena Ramp Ratke Road, Port Yadiraville, Oregon, 73007-9818 	true	6871	6	5	
+"\N"	247 Thiel Row Osinski Light, Myrticeland, Mississippi, 95309 	true	6128	2	2	
+"\N"	354 Murphy Viaduct Karlee Brooks, Lake Gabeport, Missouri, 24009 	false	6255	7	4	
+"\N"	443 Rosalind Drives Suzanne Keys, Gloverfort, New Mexico, 89376 	false	2311	3	7	
+"\N"	087 Antonina Path Fahey Knoll, Rempelton, South Carolina, 98066 	false	2535	5	2	
+"\N"	9657 Lakin Locks Arianna Course, West Matildafurt, Wisconsin, 05711-9574 	false	3107	0	5	
+"\N"	594 Dagmar Valley Jamarcus Road, South Josiah, Virginia, 21558-3398 	false	3070	5	1	
+"\N"	7870 Maudie Valley Stokes Roads, Lake Eldredberg, Arizona, 15045-6718 	false	6839	4	4	
+"\N"	164 Volkman Mission Lorenz Mills, Gunnarfurt, Hawaii, 83720 	true	3807	8	6	
+"\N"	647 Ratke Springs Moore Summit, Bartolettiborough, Wisconsin, 49979 	false	876	4	9	
+"\N"	5923 Lesch Spurs Perry Union, West Kennedy, Colorado, 14061 	true	4098	5	10	
+"\N"	3069 Corwin Wells Virgie Forges, Westtown, Minnesota, 88149-5892 	true	5344	8	7	
+"\N"	28521 Bruen Brook Sigrid Points, Hintzhaven, Montana, 86591 	false	6941	9	3	
+"\N"	14787 DuBuque Well Labadie Mews, Port Uriel, Maine, 06326-0767 	false	1450	3	1	
+"\N"	2588 Kuhn Walks Hegmann Hill, South Sabrynaberg, Nebraska, 43385 	false	3505	7	8	
+"\N"	5607 Pierre Green Charley Pines, Judeland, Vermont, 60460-9912 	true	2917	9	10	
+"\N"	38056 Reginald Mountains Lowe Point, Lehnerton, New Mexico, 42839 	true	5201	2	7	
+"\N"	52387 Rowe Road Krajcik Loaf, West Adonismouth, Massachusetts, 50709 	false	5353	7	8	
+"\N"	70930 Felix Keys Lynch Summit, Port Keaton, Maryland, 73374 	false	2959	6	2	
+"\N"	8910 Ruecker Shore Nolan Fork, South Sadye, Virginia, 49805-1026 	true	4759	3	10	
+"\N"	704 Anahi Overpass Buford Streets, Port Toy, Iowa, 01583 	true	2414	6	10	
+"\N"	743 Labadie Green Hudson Spurs, Feeneyborough, Louisiana, 33092 	false	5773	7	9	
+"\N"	223 Morissette Ways Consuelo Road, Boyerton, New York, 48018-6713 	true	3180	7	6	
+"\N"	2797 Hilll Mall Mills Viaduct, East Dorthy, Hawaii, 59985 	false	2554	1	5	
+"\N"	58281 Quincy Hollow Declan Fields, Lake Aglae, Maine, 17976-5633 	false	4217	3	4	
+"\N"	25001 Bechtelar Court White Fords, West Jovanberg, Tennessee, 60916-8746 	false	6876	8	6	
+"\N"	6373 Kutch Garden Collins Trace, Port Elizabethmouth, North Carolina, 58039-6182 	false	2554	9	3	
+"\N"	754 Irwin Lodge Witting Road, New Earnestine, South Carolina, 80543-7857 	false	5889	9	8	
+"\N"	34611 Garett Drive Chloe Trail, Boscohaven, North Carolina, 27096-1532 	false	4417	4	2	
+"\N"	2469 Imogene Ridge Reyes Extension, Bernierstad, North Dakota, 28364-0012 	true	1260	2	1	
+"\N"	712 Cleo Mill Bode Shores, Lake Aracelihaven, Pennsylvania, 69199-7378 	true	5696	3	4	
+"\N"	13440 Zulauf Road Hansen Turnpike, East Kali, New Jersey, 31891-9554 	false	2605	10	6	
+"\N"	568 Lakin View Von Junction, South Robbieland, Delaware, 95450-6487 	false	792	2	4	
+"\N"	46683 Kellie Oval Nayeli Unions, Revafurt, New Mexico, 70808 	true	2341	2	4	
+"\N"	756 Collins Brooks Parker Plaza, East Eleonoreshire, Montana, 17389 	false	877	2	8	
+"\N"	88847 Morissette Branch Schumm Throughway, South Arvid, Mississippi, 29452-0775 	false	4626	5	4	
+"\N"	3521 O'Keefe Knoll Wuckert Place, Angieberg, Colorado, 72947-4376 	false	2960	5	7	
+"\N"	50080 Logan Harbor Ullrich Point, Lynchside, Nebraska, 51879 	false	4991	8	2	
+"\N"	5403 Emilie Cliff Dicki Brook, Lake Marianne, Minnesota, 10724 	true	3481	10	3	
+"\N"	2170 Dulce Ports Albin Walk, Steuberville, Virginia, 95290 	true	3926	7	2	
+"\N"	9361 Fausto Turnpike Pollich Club, Hansenborough, Illinois, 34115-7982 	false	3807	4	4	
+"\N"	2130 Kuhic Camp Swift Brook, New Allenestad, Virginia, 54567 	true	1238	9	5	
+"\N"	83231 Zackery Crossroad Tatyana Isle, East Leta, Virginia, 95464-0485 	false	4237	2	1	
+"\N"	29667 Hintz Brooks Goldner Prairie, New Hailey, Connecticut, 78688 	false	2093	0	1	
+"\N"	73469 Lynn Parkway Jacklyn Stravenue, Lake Jace, New York, 15389-8975 	false	5838	1	1	
+"\N"	31559 Annabelle Track Carson Neck, West Morton, Delaware, 25886 	true	2297	9	6	
+"\N"	1122 Brekke Branch Precious Radial, South Kalebberg, Ohio, 26542 	true	2825	6	3	
+"\N"	967 Concepcion Cape Mohammad Meadows, O'Keefemouth, Michigan, 21560 	false	3276	2	10	
+"\N"	3073 Brown Inlet Hansen Station, Connberg, North Dakota, 27897 	true	4009	6	3	
+"\N"	08819 Schuppe Court Doyle Drive, Rautown, Michigan, 64526 	false	349	6	9	
+"\N"	9258 O'Hara Rest Angelina Shore, Port Sebastianborough, Colorado, 43143 	true	5188	10	3	
+"\N"	239 Cristina Crescent Sporer Underpass, North Kaya, Kansas, 86615 	false	5506	1	2	
+"\N"	270 Edwina Well Monahan Valleys, Schneiderport, North Dakota, 45235 	false	4008	8	8	
+"\N"	336 Ernser Valleys Clarabelle Manors, Jonesburgh, Kentucky, 73031-2058 	false	3964	7	5	
+"\N"	353 Mayert Street Raynor Hills, Lefflerstad, Oklahoma, 06366 	true	6728	10	5	
+=======
 "\N"	849 Jalon Extensions Gulgowski Walk, Halvorsonborough, New Hampshire, 79462 	false	5623	7	2	
 "\N"	29238 Raven Port Jesse Cliffs, Port Ulisesland, Rhode Island, 19029 	false	6632	9	8	
 "\N"	863 Conrad Fork Lueilwitz Hills, Keeblerborough, South Carolina, 48542 	true	2949	1	10	

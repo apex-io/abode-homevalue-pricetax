@@ -8,7 +8,8 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors",
     "build": "webpack --watch",
-    "start": "nodemon server/server.js"
+    "start": "nodemon server/server.js",
+    "seed": "node server/addressTableDataSeeder.js"
   },
   "repository": {
     "type": "git",
