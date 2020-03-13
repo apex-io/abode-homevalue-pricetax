@@ -1,0 +1,100 @@
+"\N"	849 Jalon Extensions Gulgowski Walk, Halvorsonborough, New Hampshire, 79462 	false	5623	7	2	
+"\N"	29238 Raven Port Jesse Cliffs, Port Ulisesland, Rhode Island, 19029 	false	6632	9	8	
+"\N"	863 Conrad Fork Lueilwitz Hills, Keeblerborough, South Carolina, 48542 	true	2949	1	10	
+"\N"	341 Reyna Alley Mills Valley, West Ashlyhaven, Mississippi, 66051-3847 	false	4302	6	6	
+"\N"	128 Donnelly Point Samantha Club, North Marjolaine, Minnesota, 12147 	false	6103	6	8	
+"\N"	82518 Oscar Overpass Hauck Mall, West Elenor, Wyoming, 39397-3313 	false	2078	6	3	
+"\N"	71213 Thiel Ford Santiago Radial, Darrionhaven, Washington, 35154-5234 	true	6105	9	10	
+"\N"	674 Makenzie Heights Gaylord Turnpike, New Ezequielville, Wisconsin, 43437-3514 	false	3099	6	10	
+"\N"	801 Asha Springs Fay Ramp, Guadalupestad, Rhode Island, 14111 	true	726	9	3	
+"\N"	1921 Kellen Row Humberto Island, Jakubowskitown, New Hampshire, 92941 	false	4216	0	2	
+"\N"	9463 Stoltenberg Shoal Kshlerin Drive, Armstrongburgh, Arizona, 04889-7661 	true	3187	8	8	
+"\N"	498 Phyllis Lane Rowland Mountains, North Victoria, Washington, 29045-5521 	false	574	8	9	
+"\N"	5602 Wisoky Shoals McKenzie Loop, East Effie, Delaware, 16433 	false	3485	3	4	
+"\N"	2937 Nils Loaf Doyle Stream, South Clairstad, Nevada, 44398 	true	6066	2	1	
+"\N"	820 Kuvalis Bypass Devin Islands, Greenfort, New Jersey, 87474-1092 	true	3781	8	3	
+"\N"	6240 Harris Stravenue Armando Keys, Padbergview, Indiana, 10596 	true	3953	0	6	
+"\N"	00364 Zemlak Coves Hardy Overpass, Schulistville, Kansas, 76005 	false	2639	9	8	
+"\N"	6374 Lelah Trafficway Schuster Prairie, New Mariane, Colorado, 24160-1669 	true	5775	9	10	
+"\N"	66303 Christy Course Runte Viaduct, Port Heloise, Indiana, 31951-9230 	false	877	10	10	
+"\N"	39301 Griffin Estates Dooley Garden, Morganberg, Maryland, 46271-2769 	true	5208	6	9	
+"\N"	33462 Franz Tunnel Adrien Orchard, Bergnaummouth, Vermont, 07568-6557 	true	2305	3	9	
+"\N"	2999 Stamm View Mueller Station, West Paigebury, Delaware, 08107 	true	5160	10	2	
+"\N"	4558 Heidenreich Well Trever Court, Lake Aftonmouth, Idaho, 79483-8722 	false	1299	4	9	
+"\N"	2720 Ebert Roads Cleve Squares, Hellerville, Kansas, 27302-0599 	false	910	9	10	
+"\N"	347 Lueilwitz Ridges Evan Pike, Pfefferview, Utah, 51150-0841 	false	6516	3	5	
+"\N"	5597 Diana Underpass Seamus Squares, North Joel, Rhode Island, 65262 	false	1276	1	7	
+"\N"	5495 Walter Island Ullrich Ville, South Catalinaton, Ohio, 82545-2208 	false	3230	8	10	
+"\N"	649 Swift Springs Goyette Knoll, Magdalenamouth, Virginia, 43162 	true	2771	1	9	
+"\N"	7227 O'Connell Isle Sylvester Circles, South Zelmaton, Nevada, 64613-5291 	true	3786	1	7	
+"\N"	916 Gilberto Gardens Hahn Walk, Brendashire, Michigan, 12771-3405 	false	4848	1	8	
+"\N"	28178 Fanny Club Ruecker Greens, Princessside, California, 82230-3467 	true	3720	9	2	
+"\N"	495 Davion Camp Madeline Knoll, North Justusberg, Oklahoma, 82229-0779 	false	3155	3	6	
+"\N"	1819 Becker Island Rafaela Mall, West Genesismouth, Washington, 45556-7557 	true	5211	1	1	
+"\N"	7591 Isom Bridge Terence Brook, North Chandlerland, Massachusetts, 36361 	false	4537	0	5	
+"\N"	9066 Hillary Corners Gerardo Canyon, Lake Norris, Wisconsin, 33865-1445 	false	2166	4	9	
+"\N"	31015 Ressie Prairie Jed Throughway, Rolfsonstad, Maine, 65586 	false	4553	5	5	
+"\N"	960 Alyson Isle Mandy Meadows, Starkshire, Wisconsin, 38294 	true	6316	8	6	
+"\N"	25124 Mayert Glen Satterfield Throughway, West Zack, Louisiana, 90493-8104 	false	4589	5	7	
+"\N"	85652 Lesch Harbor Jayden Forks, Schoenville, New York, 32543-0510 	false	2446	5	8	
+"\N"	586 Ullrich Keys Kiehn Port, Kevonfort, Arizona, 01929 	true	1232	8	5	
+"\N"	655 Jayce Motorway Mueller Route, New Carrollland, Colorado, 49077 	false	5557	3	4	
+"\N"	1937 Macejkovic Mission Koelpin Isle, Bettiemouth, Vermont, 85307-3801 	false	4775	2	10	
+"\N"	91551 MacGyver Forges Stephan Pines, Lake Selena, Ohio, 66636-0705 	true	3692	7	9	
+"\N"	60278 Lola Plain Farrell Freeway, New Meggie, Indiana, 68324 	true	1773	10	3	
+"\N"	770 Glenda Isle Brown Ports, Americahaven, Illinois, 54641 	true	6816	4	9	
+"\N"	44414 Gennaro Rapid Esta Cliffs, Lake Tyra, Illinois, 39107 	false	3495	0	10	
+"\N"	9244 Bell Lodge Mason Stravenue, West Ken, Rhode Island, 43168-0694 	true	5635	1	6	
+"\N"	147 Devin Via Mitchell Rue, Amirton, New Jersey, 35396-1662 	true	3726	5	3	
+"\N"	90547 Kailyn Village Feest Extension, East Caraberg, Alabama, 07285 	false	740	5	6	
+"\N"	43429 Andres Courts West Bridge, North Deondrebury, Oklahoma, 59222 	true	5150	5	7	
+"\N"	019 Sam Spring Savanna Expressway, Maudeshire, Missouri, 02192-7883 	false	6351	1	4	
+"\N"	8193 Myra Stream Brakus Forge, North Ottilie, Iowa, 16687-3166 	true	6413	3	1	
+"\N"	166 Russ Estates Rogahn Parks, Koleville, Connecticut, 88709 	true	5171	1	7	
+"\N"	810 Simeon Port Wintheiser Field, Carrollside, South Dakota, 06859 	false	3506	9	10	
+"\N"	693 Katharina Springs Smitham Manors, East Lorenzafurt, Texas, 06988 	true	215	8	1	
+"\N"	0196 Dibbert Well Hackett Turnpike, West Cotychester, Virginia, 99813-9062 	false	2043	10	2	
+"\N"	6772 Kunze Forest Julio Mission, Kendrickbury, Arkansas, 94171 	false	2300	10	4	
+"\N"	478 Emily Viaduct Mann Shoal, West Eunicebury, North Carolina, 33575 	true	6209	2	10	
+"\N"	898 Dedric Underpass Jalen Vista, New Michale, Illinois, 95578-5885 	true	1895	9	5	
+"\N"	6854 Collier Mountain Brielle Islands, Lake Etha, New Jersey, 43696 	false	2525	4	10	
+"\N"	815 Nicholas Island Boehm Trail, Emmerichtown, Iowa, 12672-4220 	false	6408	4	7	
+"\N"	653 Tamara Cape Nienow Groves, Vonport, Wyoming, 24287 	true	3461	3	7	
+"\N"	146 Douglas Forest McDermott Inlet, Lake Freddie, Minnesota, 52868 	true	3907	5	10	
+"\N"	838 Laisha Port Lenny Haven, Kovacekchester, Nebraska, 50884 	true	6916	5	2	
+"\N"	39590 Carleton Curve Klein Island, New Rhoda, Oklahoma, 79614 	true	4547	8	10	
+"\N"	99616 DuBuque Plaza Dee Track, New Cletus, West Virginia, 55101 	true	5526	10	2	
+"\N"	493 Brown Avenue Edwin Inlet, East Amani, Illinois, 78495-8130 	false	6631	3	10	
+"\N"	841 Rosalind Meadows Ali Lane, Bobbiefort, Maryland, 44869 	false	3297	6	9	
+"\N"	2302 Leila Junction Kassulke Spurs, Martinemouth, New Jersey, 74276-7942 	false	5816	1	8	
+"\N"	757 Jo Vista Greenfelder Turnpike, Shannonport, Nebraska, 92552-8149 	true	2536	3	4	
+"\N"	6772 Deckow Mountain Doyle Gateway, West Omer, Hawaii, 13035 	true	4579	8	4	
+"\N"	86816 Wilderman Trafficway Hermann Springs, South Marciafurt, North Carolina, 02257 	false	4588	6	8	
+"\N"	6114 Preston Ville Gilbert Mountain, Vickychester, California, 26890 	false	5244	2	9	
+"\N"	2025 Cara Union Farrell Field, Bonniefurt, Indiana, 37810-2767 	true	1787	4	5	
+"\N"	7911 Brisa Highway Schimmel Oval, New Adrielmouth, Florida, 00370-6438 	false	1945	8	2	
+"\N"	3826 Lubowitz Squares Arnulfo Radial, Gerlachbury, West Virginia, 80219-0355 	true	879	2	5	
+"\N"	582 Fahey Keys Clint Heights, Priscillatown, Michigan, 35418 	true	5879	9	2	
+"\N"	908 Bogan Drive Schuster Loaf, Morarfurt, Vermont, 45526-1614 	false	5311	7	9	
+"\N"	8111 Hammes Glen Lee Island, Port Chasity, Louisiana, 70739-6146 	true	1530	6	3	
+"\N"	076 Lillie Pine Hagenes Crest, Kenland, Missouri, 72903 	false	5904	0	3	
+"\N"	1337 Paula Inlet Denesik Mews, North Veronica, Delaware, 00424 	false	6561	3	7	
+"\N"	40621 Abbott Greens Swaniawski Drive, New Sidney, Arkansas, 23790-5902 	true	5845	2	7	
+"\N"	15510 Christina Road Uriel Glen, South Anabelfurt, Kansas, 00286 	true	2527	3	2	
+"\N"	685 Yasmeen Ramp Filomena Forks, Davisland, Colorado, 15478 	true	4189	9	2	
+"\N"	78731 Amaya Tunnel Nina Junctions, New Ole, Minnesota, 36171-1384 	true	4316	4	3	
+"\N"	39203 Brannon Drive Alayna Fork, Cassinview, Iowa, 08120 	true	2042	3	5	
+"\N"	662 Reuben Square Collier Camp, Marksside, New York, 92526 	false	6899	4	4	
+"\N"	02933 Vincenzo Overpass Susana Valleys, Port Clinton, New Jersey, 36917 	true	4044	2	2	
+"\N"	32358 Chadrick Stravenue Gorczany Glen, Odellbury, Idaho, 21034-6903 	true	1280	9	8	
+"\N"	68769 Trever Drive Laura Points, Wolfchester, Pennsylvania, 63942 	true	4757	4	10	
+"\N"	69573 Hudson Mission Bashirian Streets, New Vinniemouth, Minnesota, 45247 	true	4301	6	9	
+"\N"	200 Mante Prairie Kiera Motorway, North Sabina, Maine, 82588-1271 	true	3250	7	8	
+"\N"	72220 Charlie Track Rachael Square, Erdmantown, Minnesota, 85644 	true	3311	6	6	
+"\N"	61463 Lorine Flat Elyse Lane, West Prestonside, Maine, 64352 	false	3919	3	7	
+"\N"	55225 Heller Fall Pink Lights, Elyssamouth, Wisconsin, 04493-0103 	false	2250	5	5	
+"\N"	6317 Quitzon Meadows Schiller Lock, Willville, New Hampshire, 32022 	true	6321	1	5	
+"\N"	18610 Demond Prairie Gislason Curve, South Kayla, Kentucky, 29138 	true	5149	10	8	
+"\N"	27510 Jacky Rapid Royce Corner, East Flavieburgh, Maine, 39170 	false	3309	3	1	
+"\N"	973 Champlin Junction Jeromy Circle, South Quinnmouth, North Dakota, 00623 	false	495	4	9	
+"\N"	00898 Isom Bypass Hills Pass, Port Dorothyton, Nevada, 05904 	true	1623	8	9	
