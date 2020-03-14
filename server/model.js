@@ -1,20 +1,18 @@
-const fs = require('fs');
-const { addresses } = require('./addressTableDataSeeder');
+const { db } = require('./db');
 
-const model = {};
-
-model.addressesTableData = '';
-
-for (let i = 0; i < 100; i += 1) {
-  model.addressesTableData += `"\\N"\t${addresses.address[i]}\t${addresses.on_market[i]}\t${addresses.sqft[i]}\t${addresses.bed[i]}\t${addresses.bath[i]}\t\n`;
-}
-
-model.seedAddresses = (data) => {
-  fs.writeFile('addressTableData.txt', data, 'utf8');
-  return '';
+const getAllAddressesData = (callback) => {
+  const queryString = 'SELECT * FROM addresses';
+  db.query(queryString, (error, result) => {
+    if (error) {
+      console.log('There has been an error querying the database. The error is:', error);
+      callback(error, null);
+    } else {
+      console.log('The result from query is:', result);
+      callback(null, result);
+    }
+  })
 };
 
-
 module.exports = {
-  model,
+  getAllAddressesData,
 };
