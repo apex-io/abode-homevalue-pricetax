@@ -9,7 +9,7 @@
     "test:coverage": "jest --coverage --colors",
     "build": "webpack --watch",
     "start": "nodemon server/server.js",
-    "seed": "node server/addressTableDataSeeder.js"
+    "seeder": "node server/fakeDataSeeder.js"
   },
   "repository": {
     "type": "git",
