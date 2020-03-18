@@ -7,6 +7,7 @@ class HomeValueApp extends React.Component {
     this.state = {
       addressSummary: 'request data',
       addressValues: 'request data',
+      similarAddresses: 'requet data',
     };
   }
 
@@ -14,21 +15,33 @@ class HomeValueApp extends React.Component {
     $.ajax({
       type: 'get',
       url: '/exampleHomeSummary/',
-      data: { address: '8050 Eudora Corner Margarett Summit, North Justontown, Virginia, 88577' },
+      data: {
+        address: '167 Rozella Villages Parker Highway, Lake Lavonneborough, Illinois, 36019',
+        zipCode: 36019,
+      },
       success: (result) => this.setState({
         addressSummary: result.addressSummary,
         addressValues: result.addressValues,
+        similarAddresses: result.similarAddresses,
       }),
     });
   }
 
   render() {
     console.log(this.state);
+    let Bestimate = 0;
+    for (let i = 0; i < this.state.similarAddresses.length; i += 1) {
+      Bestimate += this.state.similarAddresses[i].currentestimatedvalue;
+    }
+    Bestimate /= this.state.similarAddresses.length;
     return (
       // console.log('check if the content is fetched')
       <div>
+        <h1>Home value</h1>
+        <div>Bestimate</div>
+        <div>{Bestimate}</div>
         homeSummary:
-        {JSON.stringify(this.state)}
+        {JSON.stringify(this.state.similarAddresses)}
       </div>
     );
   }
