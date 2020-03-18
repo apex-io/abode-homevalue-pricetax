@@ -18,7 +18,7 @@ describe('Test the state of the component', () => {
 
   it('The initial ajax request was made', () => {
     console.log('Test: The initial ajax request was made.');
-    expect(spyCall.args[0].url).toBe('/homeSummary/');
+    expect(spyCall.args[0].url).toBe('/exampleHomeSummary/');
   });
 
   wrapper.unmount();
