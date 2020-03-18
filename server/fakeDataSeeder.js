@@ -3,11 +3,13 @@ const fs = require('fs');
 
 const addresses = {
   address: [],
+  zipCode: [],
   on_market: [],
   sqft: [],
   bed: [],
   bath: [],
   addressesTableData: '',
+  currentEstimatedValue: [],
 };
 
 const valueHistory = {
@@ -24,12 +26,17 @@ const numberOfHouses = 1000;
 const numberOfValuesPerHouse = 1000;
 
 for (let i = 0; i < numberOfHouses; i += 1) {
-  addresses.address.push(faker.fake('{{address.streetAddress}} {{address.streetName}}, {{address.city}}, {{address.state}}, {{address.zipCode}} '));
+  const streetAddress = faker.address.streetAddress();
+  const streetName = faker.address.streetName();
+  const city = faker.address.city();
+  const state = faker.address.state();
+  const zipCode = faker.address.zipCode();
+  addresses.address.push(`${streetAddress} ${streetName}, ${city}, ${state}, ${zipCode}`);
+  addresses.zipCode.push(zipCode.slice(0, 5));
   addresses.on_market.push(faker.random.boolean());
   addresses.sqft.push(faker.random.number({ min: 200, max: 7000 }));
   addresses.bed.push(faker.random.number({ min: 0, max: 10 }));
   addresses.bath.push(faker.random.number({ min: 1, max: 10 }));
-  addresses.addressesTableData += `"\\N"\t${addresses.address[i]}\t${addresses.on_market[i]}\t${addresses.sqft[i]}\t${addresses.bed[i]}\t${addresses.bath[i]}\t\n`;
   valueHistory.address.push(addresses.address[i]);
   valueHistory.date.push([]);
   valueHistory.homeValue.push([]);
@@ -82,6 +89,8 @@ for (let i = 0; i < numberOfHouses; i += 1) {
 }
 for (let i = 0; i < numberOfHouses; i += 1) {
   valueHistory.date[i].sort(-1);
+  addresses.currentEstimatedValue.push(valueHistory.homeValue[numberOfValuesPerHouse - 1][i]);
+  addresses.addressesTableData += `"\\N"\t${addresses.address[i]}\t${addresses.zipCode[i]}\t${addresses.on_market[i]}\t${addresses.sqft[i]}\t${addresses.bed[i]}\t${addresses.bath[i]}\t${addresses.currentEstimatedValue[i]}\n`;
   for (let j = 0; j < numberOfValuesPerHouse; j += 1) {
     valueHistory.estimatedValueHistoryTableData += `"\\N"\t${valueHistory.address[i]}\t${valueHistory.date[i][j]}\t${valueHistory.homeValue[j][i]}\t${valueHistory.areaValue[j][i]}\t${valueHistory.cityValue[j][i]}\t\n`;
   }
