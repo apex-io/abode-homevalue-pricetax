@@ -29,19 +29,31 @@ class HomeValueApp extends React.Component {
 
   render() {
     console.log(this.state);
-    let Bestimate = 0;
+    let bestimate = 0;
+    let bestimateRangeLow = this.state.addressSummary.currentestimatedvalue;
+    let bestimateRangeHigh = this.state.addressSummary.currentestimatedvalue;
     for (let i = 0; i < this.state.similarAddresses.length; i += 1) {
-      Bestimate += this.state.similarAddresses[i].currentestimatedvalue;
+      bestimate += this.state.similarAddresses[i].currentestimatedvalue;
+      if (this.state.similarAddresses[i].currentestimatedvalue < bestimateRangeLow) {
+        bestimateRangeLow = this.state.similarAddresses[i].currentestimatedvalue;
+      }
+      if (this.state.similarAddresses[i].currentestimatedvalue > bestimateRangeHigh) {
+        bestimateRangeHigh = this.state.similarAddresses[i].currentestimatedvalue;
+      }
     }
-    Bestimate /= this.state.similarAddresses.length;
+    bestimate /= this.state.similarAddresses.length;
     return (
       // console.log('check if the content is fetched')
       <div>
         <h1>Home value</h1>
         <div>Bestimate</div>
-        <div>{Bestimate}</div>
+        <div>${bestimate}</div>
+        <div>Bestimate sale range</div>
+        <div>${bestimateRangeLow} - ${bestimateRangeHigh}</div>
+        {/* add the below portion into a test >> */}
         homeSummary:
         {JSON.stringify(this.state.similarAddresses)}
+        {/* << */}
       </div>
     );
   }
