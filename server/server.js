@@ -14,11 +14,11 @@ app.use(bodyParser({ extended: true }));
 
 app.use(express.static(path.resolve(__dirname, '../public/')));
 
-app.get('/getAllAddressesData', (req, res) => {
+app.get('/homeSummary/', (req, res) => {
   getAllAddressesData((error, result) => {
     res.send(result);
-  })
-})
+  });
+});
 
 app.listen(port, () => {
   console.log(`listening on port ${port}...`);

@@ -1,7 +1,8 @@
 // eslint-disable-next-line import/extensions
-import React from 'react';
-import ReactDOM from 'react-dom';
-import EstimateHistoryEntry from './components/EstimateHistoryEntry.jsx';
+const React = require('react');
+const ReactDOM = require('react-dom');
+// import EstimateHistoryEntry from './components/EstimateHistoryEntry.jsx';
+const HomeValueApp = require('./components/HomeValueApp.jsx').default;
 
 
-ReactDOM.render(<EstimateHistoryEntry />, document.getElementById('app'));
+ReactDOM.render(<HomeValueApp />, document.getElementById('app'));

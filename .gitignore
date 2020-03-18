@@ -1,5 +1,5 @@
 # config file for database
-database/config.js
+database/index.js
 # node modules
 node_modules/
 # test coverage

@@ -10,7 +10,7 @@ const getAllAddressesData = (callback) => {
       console.log('The result from query is:', result);
       callback(null, result);
     }
-  })
+  });
 };
 
 module.exports = {
