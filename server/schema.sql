@@ -16,7 +16,7 @@ CREATE TABLE addresses (
 
 CREATE TABLE estimated_value_history (
   id INT(10) AUTO_INCREMENT,
-  address_id INT(10),
+  address VARCHAR(100),
   date DATE,
   estimated_home_value INT(15),
   estimated_area_value INT(15),
@@ -40,3 +40,14 @@ CREATE TABLE tax_history (
   tax_assessment INT(15),
   PRIMARY KEY (id)
 );
+
+-- to clear data && set schema in CLI:
+-- mysql -u root < server/schema.sql
+
+-- to load data for addresses table in mysql:
+-- USE homevalue_pricetax;
+-- LOAD DATA LOCAL INFILE './fakeData/addressTableData.txt' INTO TABLE addresses;
+
+-- to load data for estimated_value_history table in mysql:
+-- USE homevalue_pricetax;
+-- LOAD DATA LOCAL INFILE './fakeData/estimatedValueHistoryTableData.txt' INTO TABLE estimated_value_history;
