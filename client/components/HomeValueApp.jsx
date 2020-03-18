@@ -5,16 +5,19 @@ class HomeValueApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      homeSummary: 'request home summary',
+      addressSummary: 'request data',
+      addressValues: 'request data',
     };
   }
 
   componentDidMount() {
     $.ajax({
       type: 'get',
-      url: '/homeSummary/',
+      url: '/exampleHomeSummary/',
+      data: { address: '8050 Eudora Corner Margarett Summit, North Justontown, Virginia, 88577' },
       success: (result) => this.setState({
-        homeSummary: result,
+        addressSummary: result.addressSummary,
+        addressValues: result.addressValues,
       }),
     });
   }
@@ -22,9 +25,10 @@ class HomeValueApp extends React.Component {
   render() {
     console.log(this.state);
     return (
+      // console.log('check if the content is fetched')
       <div>
         homeSummary:
-        {this.state.homeSummary[0].address}
+        {JSON.stringify(this.state)}
       </div>
     );
   }

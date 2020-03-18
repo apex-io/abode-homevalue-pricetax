@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
-const { getAllAddressesData } = require('./model');
+const { model } = require('./model');
 
 const app = express();
 
@@ -14,8 +14,10 @@ app.use(bodyParser({ extended: true }));
 
 app.use(express.static(path.resolve(__dirname, '../public/')));
 
-app.get('/homeSummary/', (req, res) => {
-  getAllAddressesData((error, result) => {
+app.get('/exampleHomeSummary/', (req, res) => {
+  const { address } = req.query;
+  console.log('The query address is:', address);
+  model.getExampleAddressesData(address, (error, result) => {
     res.send(result);
   });
 });
