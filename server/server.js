@@ -15,9 +15,10 @@ app.use(bodyParser({ extended: true }));
 app.use(express.static(path.resolve(__dirname, '../public/')));
 
 app.get('/exampleHomeSummary/', (req, res) => {
-  const { address } = req.query;
-  console.log('The query address is:', address);
-  model.getExampleAddressesData(address, (error, result) => {
+  // const { address, zipCode } = req.query;
+  // console.log('The query address is:', address);
+  // console.log('The query zipcode is:', zipCode);
+  model.getExampleAddressesData(req.query, (error, result) => {
     res.send(result);
   });
 });
