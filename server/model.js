@@ -2,9 +2,10 @@ const { db } = require('./db');
 
 const model = {};
 
-model.getExampleAddressesData = (address, callback) => {
+model.getExampleAddressesData = (query, callback) => {
   const queryString = 'SELECT * FROM addresses WHERE address = ?';
-  const addressToSearch = [address];
+  const addressToSearch = [query.address];
+  const zipCodeToSearch = [query.zipCode, query.zipCode];
   db.query(queryString, addressToSearch, (errorFromAddressesQuery, address) => {
     if (errorFromAddressesQuery) {
       console.log('There has been an error querying the database. The error is:', errorFromAddressesQuery);
@@ -17,12 +18,15 @@ model.getExampleAddressesData = (address, callback) => {
           console.log('There has been an error querying the addresses from the database. The error is:', errorFromHomeValueQuery);
           callback(errorFromHomeValueQuery, null);
         } else {
-          // const result = { address, homeValue };
-          const returnData = {
-            addressSummary: address[0],
-            addressValues: homeValue,
-          };
-          callback(null, returnData);
+          const queryString = 'SELECT * FROM addresses WHERE zipcode < (? + 500) && zipcode > (? - 500)';
+          db.query(queryString, zipCodeToSearch, (errorFromZipCodeQuery, addresses) => {
+            const returnData = {
+              addressSummary: address[0],
+              addressValues: homeValue,
+              similarAddresses: addresses,
+            };
+            callback(null, returnData);
+          });
         }
       });
     }

@@ -7,10 +7,12 @@ USE homevalue_pricetax;
 CREATE TABLE addresses (
   id INT(10) AUTO_INCREMENT,
   address VARCHAR(100),
+  zipcode INT(5),
   on_market VARCHAR(5),
   sqft INT(4),
   bed INT(2),
   bath INT(2),
+  currentestimatedvalue INT(15),
   PRIMARY KEY (id)
 );
 
