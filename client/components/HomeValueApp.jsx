@@ -10,7 +10,9 @@ class HomeValueApp extends React.Component {
       addressValues: 'request data',
       similarAddresses: 'requet data',
       hasData: false,
+      showEstimateModels: { visibility: 'collapse' },
     };
+    this.onClickHandler = this.onClickHandler.bind(this);
   }
 
   componentDidMount() {
@@ -30,9 +32,19 @@ class HomeValueApp extends React.Component {
     });
   }
 
+  // test onclick targetting the right 'this'
+  onClickHandler(event) {
+    if (this.state.showEstimateModels.visibility === 'collapse') {
+      this.setState({ showEstimateModels: { visibility: 'visible' } });
+    } else if (this.state.showEstimateModels.visibility === 'visible') {
+      this.setState({ showEstimateModels: { visibility: 'collapse' } });
+    }
+    event.preventDefault();
+  }
+
   render() {
     if (this.state.hasData) {
-      console.log(this.state);
+      // console.log(this.state);
       let bestimate = 0;
       let bestimateRangeLow = this.state.addressSummary.currentestimatedvalue;
       let bestimateRangeHigh = this.state.addressSummary.currentestimatedvalue;
@@ -50,15 +62,15 @@ class HomeValueApp extends React.Component {
         // console.log('check if the content is fetched')
         <div>
           <div>
-            <h1>Home value</h1>
+            <div className={'module-name'}>Home value</div>
             <div>Bestimate</div>
             <div>${bestimate}</div>
             <div>Bestimate sale range: ${bestimateRangeLow} - ${bestimateRangeHigh}</div>
           </div>
-          <button>Show more Bestimate models</button>
-          <div>
-            <h1>Bestimate models</h1>
-            <p>The Bestimate uses a set of data models to estimate this home's value.</p>
+          <button onClick={this.onClickHandler}>Show more estimated models</button>
+          <div style={this.state.showEstimateModels}>
+            <div>Bestimate models</div>
+            <div>The Bestimate uses a set of data models to estimate this home's value.</div>
             {/* for test: show the component below rendered and if the error is at this level or at the child level */}
             <ComparableHomeModel similarAddresses={this.state.similarAddresses} />
             {/* add the below portion into a test >> */}
