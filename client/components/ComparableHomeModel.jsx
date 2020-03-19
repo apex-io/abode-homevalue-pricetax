@@ -27,8 +27,8 @@ class ComparableHomeModel extends React.Component {
     // test if comparableEstimate is a calculated to be an appropriate number
     return (
       <div>
-        <h2>Comparable Home Model</h2>
-        <p>Estimated value of this home based on local comparable homes: ${comparableEstimate}</p>
+        <div>Comparable Home Model</div>
+        <div>Estimated value of this home based on local comparable homes: ${comparableEstimate}</div>
         {this.props.similarAddresses.map((addressSummary, index) => {
           return (
             <ComparableHomeModelEntry addressSummary={addressSummary} key={index} />
