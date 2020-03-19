@@ -11,6 +11,7 @@ class HomeValueApp extends React.Component {
       similarAddresses: 'requet data',
       hasData: false,
       showEstimateModels: { visibility: 'collapse' },
+
     };
     this.onClickHandler = this.onClickHandler.bind(this);
   }
