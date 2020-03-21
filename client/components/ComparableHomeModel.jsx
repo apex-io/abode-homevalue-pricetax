@@ -1,5 +1,6 @@
 const React = require('react');
 const ComparableHomeModelEntry = require('./ComparableHomeModelEntry.jsx').default;
+import styles from '../style/ComparableHomeModel.css'
 
 class ComparableHomeModel extends React.Component {
   constructor(props) {
@@ -26,14 +27,17 @@ class ComparableHomeModel extends React.Component {
     comparableEstimate /= onMarketCount;
     // test if comparableEstimate is a calculated to be an appropriate number
     return (
-      <div>
-        <div>Comparable Home Model</div>
-        <div>Estimated value of this home based on local comparable homes: ${comparableEstimate}</div>
-        {this.props.similarAddresses.map((addressSummary, index) => {
-          return (
-            <ComparableHomeModelEntry addressSummary={addressSummary} key={index} />
-          );
-        })}
+      <div className={styles.comparableHomeModel}>
+        <div className={styles.comparableHomeModelTitle}>Comparable Home Model</div>
+        <div className={styles.comparableHomeModelExplaination}>Estimated value of this home based on local comparable homes </div>
+        <div className={styles.comparableHomeModelValue}>${new Intl.NumberFormat().format(comparableEstimate)}</div>
+        <div className={styles.comparableHomeModelEntries}>
+          {this.props.similarAddresses.map((addressSummary, index) => {
+            return (
+              <ComparableHomeModelEntry addressSummary={addressSummary} key={index} />
+            );
+          })}
+        </div>
       </div>
     );
   }
