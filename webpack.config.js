@@ -13,6 +13,10 @@ module.exports = {
         exclude: /node_modules/,
         use: 'babel-loader',
       },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader','css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]')
+      },
     ],
   },
 };
