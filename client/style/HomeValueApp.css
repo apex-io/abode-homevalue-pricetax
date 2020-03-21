@@ -1,22 +1,17 @@
 .homeValueApp {
   border-radius: 3px;
   background-color: rgb(255, 255, 255);
-  box-shadow: none;
-  padding: 0px;
-  max-width: max-content;
+  min-width: 450px;
+  font-family: Tahoma;
 }
 
 .appTitle {
-  font-family: "Open Sans", Tahoma, Geneva, sans-serif;
   font-size: 24px;
   line-height: 30px;
-  text-align: left;
-  letter-spacing: normal;
   padding: 32px 0px 16px;
   margin: 0px 16px 32px;
   border-bottom: 1px solid rgb(209, 209, 213);
   color: rgb(42, 42, 51);
-  display: block;
 }
 
 .bestimateSection {
@@ -25,17 +20,11 @@
 
 .bestimateTrademark {
   font-size: 16px;
-  font-family: "Open Sans",Gotham,gotham,Tahoma,Geneva,sans-serif;
-  display: inline-block;
   margin-bottom: 8px;
 }
 
 .bestimateNumber {
-  letter-spacing: 0px;
-  text-transform: none;
   color: rgb(42, 42, 51);
-  -webkit-font-smoothing: antialiased;
-  font-family: "Open Sans", Tahoma, Geneva, sans-serif;
   font-size: 22px !important;
   font-weight: 600 !important;
   margin: 0px 0px 8px;
@@ -44,7 +33,6 @@
 .bestimate {
   display: flex;
   flex-direction: column;
-  -webkit-box-align: center;
   align-items: center;
 }
 
@@ -52,47 +40,25 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 23px;
-  letter-spacing: 0px;
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Open Sans", Tahoma, Geneva, sans-serif;
   display: flex;
-  -webkit-box-pack: center;
   justify-content: center;
 }
 
 .showEstimateModelsButton {
-  border-bottom-style: initial;
-  border-left-style: initial;
-  text-align: left;
-  display: block;
-  padding: 0px;
-  border-width: 0px 0px 0px;
-  border-color: initial;
-  border-image: initial;
-  background: transparent;
-  border-top: none;
+  border-width: 0px;
   outline: none;
   margin: 32px 16px 0px;
-  font-family: "Open Sans", Gotham, gotham, Tahoma, Geneva, sans-serif;
   font-size: 15px;
   line-height: 22.5px;
-  text-align: left;
-  letter-spacing: normal;
   color: #006aff;
-  background-color: #ffffff;
-  border-right-style: initial;
   cursor: pointer;
 }
 
 .bestimateModelsSection {
-  font-family: "Open Sans", Gotham, gotham, Tahoma, Geneva, sans-serif;
   font-size: 15px;
   line-height: 22.5px;
-  text-align: left;
   color: #2a2a33;  
   background-color: #f1f1f4;
-  background-color: rgb(241, 241, 244);
   margin-bottom: 16px;
   padding: 16px;
   max-width: max-content;
@@ -103,20 +69,12 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 23px;
-  letter-spacing: 0px;
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Open Sans", Tahoma, Geneva, sans-serif;
 }
 
 .bestimateModelExplaination {
   font-weight: 400;
   font-size: 15px;
   line-height: 23px;
-  letter-spacing: 0px;
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Open Sans", Tahoma, Geneva, sans-serif;
 }
 
 .differentModels {
