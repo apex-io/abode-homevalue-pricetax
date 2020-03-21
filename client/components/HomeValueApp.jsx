@@ -1,6 +1,7 @@
 const React = require('react');
 const $ = require('jquery');
 const ComparableHomeModel = require('./ComparableHomeModel.jsx').default;
+import styles from '../style/HomeValueApp.css';
 
 class HomeValueApp extends React.Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class HomeValueApp extends React.Component {
       addressValues: 'request data',
       similarAddresses: 'requet data',
       hasData: false,
-      showEstimateModels: { visibility: 'collapse' },
+      showEstimateModels: { visibility: 'hidden' },
     };
     this.onClickHandler = this.onClickHandler.bind(this);
   }
@@ -34,10 +35,10 @@ class HomeValueApp extends React.Component {
 
   // test onclick targetting the right 'this'
   onClickHandler(event) {
-    if (this.state.showEstimateModels.visibility === 'collapse') {
+    if (this.state.showEstimateModels.visibility === 'hidden') {
       this.setState({ showEstimateModels: { visibility: 'visible' } });
     } else if (this.state.showEstimateModels.visibility === 'visible') {
-      this.setState({ showEstimateModels: { visibility: 'collapse' } });
+      this.setState({ showEstimateModels: { visibility: 'hidden' } });
     }
     event.preventDefault();
   }
@@ -60,17 +61,27 @@ class HomeValueApp extends React.Component {
       bestimate /= this.state.similarAddresses.length;
       return (
         // console.log('check if the content is fetched')
-        <div>
+        <div className={styles.homeValueApp}>
+          <div className={styles.appTitle}>Home value</div>
           <div>
-            <div className={'module-name'}>Home value</div>
-            <div>Bestimate</div>
-            <div>${bestimate}</div>
-            <div>Bestimate sale range: ${bestimateRangeLow} - ${bestimateRangeHigh}</div>
+            <div className={styles.bestimateSection}>
+              <div className={styles.bestimate}>
+                <div className={styles.bestimateTrademark}>Bestimate</div>
+                <div className={styles.bestimateNumber}>${new Intl.NumberFormat().format(parseInt(bestimate))}</div>
+              </div>
+              <div className={styles.bestimateRange}>Bestimate sale range: ${new Intl.NumberFormat().format(bestimateRangeLow)} - ${new Intl.NumberFormat().format(bestimateRangeHigh)}</div>
+            </div>
           </div>
-          <button onClick={this.onClickHandler}>Show more estimated models</button>
-          <div style={this.state.showEstimateModels}>
-            <div>Bestimate models</div>
-            <div>The Bestimate uses a set of data models to estimate this home's value.</div>
+          <button onClick={this.onClickHandler} className={styles.showEstimateModelsButton}>See more estimated models</button>
+          
+          <div style={this.state.showEstimateModels} className={styles.bestimateModelsSection}>
+            <div>
+              <div className={styles.bestimateModelTitle}>Bestimate models</div>
+              <div className={styles.bestimateModelExplaination}>The Bestimate uses a set of data models to estimate this home's value.</div>
+              <div className={styles.differentModels}>
+                <span className={styles.modelNames}>Comparable homes</span><span className={styles.modelNames}>Off-market model</span>
+              </div>
+            </div>
             {/* for test: show the component below rendered and if the error is at this level or at the child level */}
             <ComparableHomeModel similarAddresses={this.state.similarAddresses} />
             {/* add the below portion into a test >> */}
