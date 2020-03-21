@@ -2,46 +2,34 @@
   background-color: rgb(255, 255, 255);
   margin-top: 16px;
   padding: 16px;
-  max-width: 650px;
 }
 
 .comparableHomeModelTitle {
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
   font-weight: 600;
   font-size: 15px;
   line-height: 23px;
-  letter-spacing: 0px;
-  text-transform: none;
 }
 
 .comparableHomeModelExplaination {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  letter-spacing: 0px;
-  text-transform: none;
   margin-top: 8px;
 }
 
 .comparableHomeModelValue {
   display: flex;
-  -webkit-box-pack: end;
   justify-content: flex-end;
   font-weight: 400;
   font-size: 15px;
   line-height: 23px;
-  letter-spacing: 0px;
-  text-transform: none;
 }
 
 .comparableHomeModelEntries {
-  display: flex;
-  /* flex-direction: row; */
-  flex-wrap: wrap;
-  /* display: inline-block; */
-  
-  
-    /* overflow: hidden; */
+  display: grid;
+  column-gap: 16px;
+  row-gap: 16px;
+  grid-template-columns: auto auto;
 }
