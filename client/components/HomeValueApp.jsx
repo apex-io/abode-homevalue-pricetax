@@ -14,6 +14,7 @@ class HomeValueApp extends React.Component {
       showEstimateModels: { visibility: 'hidden' },
     };
     this.onClickHandler = this.onClickHandler.bind(this);
+    this.onClickNewAddressHandler = this.onClickNewAddressHandler.bind(this);
   }
 
   componentDidMount() {
@@ -41,6 +42,15 @@ class HomeValueApp extends React.Component {
       this.setState({ showEstimateModels: { visibility: 'hidden' } });
     }
     event.preventDefault();
+  }
+
+  onClickNewAddressHandler(result) {
+    this.setState({
+      addressSummary: result.addressSummary,
+      addressValues: result.addressValues,
+      similarAddresses: result.similarAddresses,
+      hasData: true,
+    });
   }
 
   render() {
@@ -90,7 +100,7 @@ class HomeValueApp extends React.Component {
               </div>
             </div>
             {/* for test: show the component below rendered and if the error is at this level or at the child level */}
-            <ComparableHomeModel similarAddresses={this.state.similarAddresses} />
+            <ComparableHomeModel similarAddresses={this.state.similarAddresses} onClickNewAddressHandler={this.onClickNewAddressHandler} />
             {/* add the below portion into a test >> */}
             {/* homeSummary:
             {JSON.stringify(this.state.similarAddresses)} */}
