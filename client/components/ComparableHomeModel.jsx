@@ -11,6 +11,7 @@ class ComparableHomeModel extends React.Component {
       showIcon: 'down-arrow.svg'
     };
     this.onShowMoreClickHandle = this.onShowMoreClickHandle.bind(this);
+    this.onClickNewAddressShowMoreHandler = this.onClickNewAddressShowMoreHandler.bind(this);
   }
 
   onShowMoreClickHandle(event) {
@@ -30,6 +31,14 @@ class ComparableHomeModel extends React.Component {
     event.preventDefault();
   }
 
+  onClickNewAddressShowMoreHandler() {
+    this.setState({
+      showMore: false,
+      showText: 'Show more',
+      showIcon: 'down-arrow.svg'
+    });
+  }
+
   render() {
     let comparableEstimate = 0;
     let onMarketCount = 0;
@@ -46,23 +55,23 @@ class ComparableHomeModel extends React.Component {
       <div className={styles.comparableHomeModel}>
         <div className={styles.comparableHomeModelTitle}><img className={styles.iconWithSpace} src="iconfinder_House_4265801.svg"></img>Comparable Home Model</div>
         <div className={styles.comparableHomeModelExplaination}>Estimated value of this home based on local comparable homes </div>
-        <div className={styles.comparableHomeModelValue}>${new Intl.NumberFormat().format(comparableEstimate)}</div>
+        <div className={styles.comparableHomeModelValue}>${new Intl.NumberFormat().format(parseInt(comparableEstimate))}</div>
         <div className={styles.comparableHomeModelEntries}>
           {this.props.similarAddresses.map((addressSummary, index) => {
             if (!this.state.showMore) {
               if (index < 4) {
                 return (
-                  <ComparableHomeModelEntry addressSummary={addressSummary} key={index} />
+                  <ComparableHomeModelEntry addressSummary={addressSummary} key={index} onClickNewAddressHandler={this.props.onClickNewAddressHandler} onClickNewAddressShowMoreHandler={this.onClickNewAddressShowMoreHandler} />
                 );
               }
             } else {
               return (
-                <ComparableHomeModelEntry addressSummary={addressSummary} key={index} />
+                <ComparableHomeModelEntry addressSummary={addressSummary} key={index} onClickNewAddressHandler={this.props.onClickNewAddressHandler} onClickNewAddressShowMoreHandler={this.onClickNewAddressShowMoreHandler} />
               );
             }
           })}
-          <div className={styles.showMore} onClick={this.onShowMoreClickHandle}><img className={styles.icon} src={this.state.showIcon}></img>{this.state.showText}</div>
         </div>
+        <div className={styles.showMore} onClick={this.onShowMoreClickHandle}><img className={styles.icon} src={this.state.showIcon}></img>{this.state.showText}</div>
       </div>
     );
   }
