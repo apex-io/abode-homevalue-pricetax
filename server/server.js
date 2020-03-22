@@ -19,7 +19,11 @@ app.get('/exampleHomeSummary/', (req, res) => {
   // console.log('The query address is:', address);
   // console.log('The query zipcode is:', zipCode);
   model.getExampleAddressesData(req.query, (error, result) => {
-    res.send(result);
+    if (error) {
+      res.end();
+    } else {
+      res.send(result);
+    }
   });
 });
 
