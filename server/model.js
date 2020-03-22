@@ -5,7 +5,8 @@ const model = {};
 model.getExampleAddressesData = (query, callback) => {
   const queryString = 'SELECT * FROM addresses WHERE address = ?';
   const addressToSearch = [query.address];
-  const zipCodeToSearch = [query.zipCode, query.zipCode];
+  const randomizeZipcode = Math.random() * 100000; // do this so the result is more spread out rather then clustered in one area
+  const zipCodeToSearch = [randomizeZipcode, randomizeZipcode];
   db.query(queryString, addressToSearch, (errorFromAddressesQuery, address) => {
     if (errorFromAddressesQuery) {
       console.log('There has been an error querying the database. The error is:', errorFromAddressesQuery);
