@@ -1,5 +1,6 @@
 const faker = require('faker');
 const fs = require('fs');
+const pictureURL = require('./dbconfig/dbconfig');
 
 const addresses = {
   address: [],
@@ -10,6 +11,7 @@ const addresses = {
   bath: [],
   addressesTableData: '',
   currentEstimatedValue: [],
+  picture: [],
 };
 
 const valueHistory = {
@@ -37,6 +39,7 @@ for (let i = 0; i < numberOfHouses; i += 1) {
   addresses.sqft.push(faker.random.number({ min: 200, max: 7000 }));
   addresses.bed.push(faker.random.number({ min: 0, max: 10 }));
   addresses.bath.push(faker.random.number({ min: 1, max: 10 }));
+  addresses.picture.push(`${pictureURL}${i + 1}.jpg`);
   valueHistory.address.push(addresses.address[i]);
   valueHistory.date.push([]);
   valueHistory.homeValue.push([]);
@@ -90,7 +93,7 @@ for (let i = 0; i < numberOfHouses; i += 1) {
 for (let i = 0; i < numberOfHouses; i += 1) {
   valueHistory.date[i].sort(-1);
   addresses.currentEstimatedValue.push(valueHistory.homeValue[numberOfValuesPerHouse - 1][i]);
-  addresses.addressesTableData += `"\\N"\t${addresses.address[i]}\t${addresses.zipCode[i]}\t${addresses.on_market[i]}\t${addresses.sqft[i]}\t${addresses.bed[i]}\t${addresses.bath[i]}\t${addresses.currentEstimatedValue[i]}\n`;
+  addresses.addressesTableData += `"\\N"\t${addresses.address[i]}\t${addresses.zipCode[i]}\t${addresses.on_market[i]}\t${addresses.sqft[i]}\t${addresses.bed[i]}\t${addresses.bath[i]}\t${addresses.currentEstimatedValue[i]}\t${addresses.picture[i]}\n`;
   for (let j = 0; j < numberOfValuesPerHouse; j += 1) {
     valueHistory.estimatedValueHistoryTableData += `"\\N"\t${valueHistory.address[i]}\t${valueHistory.date[i][j]}\t${valueHistory.homeValue[j][i]}\t${valueHistory.areaValue[j][i]}\t${valueHistory.cityValue[j][i]}\t\n`;
   }
