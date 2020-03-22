@@ -21,6 +21,7 @@
 .bestimateTrademark {
   font-size: 16px;
   margin-bottom: 8px;
+  cursor: pointer;
 }
 
 .bestimateNumber {
@@ -40,8 +41,16 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 23px;
+  color: rgb(20, 157, 48);
   display: flex;
   justify-content: center;
+  cursor: pointer;
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
 }
 
 .showEstimateModelsButton {
@@ -83,11 +92,16 @@
   flex-wrap: wrap;
 }
 
+.iconWithSpace {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
 .modelNames {
   width: 50%;
   margin-top: 8px;
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
   flex: 1 0 auto;
 }
