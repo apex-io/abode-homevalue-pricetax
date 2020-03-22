@@ -22,8 +22,8 @@ class HomeValueApp extends React.Component {
       type: 'get',
       url: '/exampleHomeSummary/',
       data: {
-        address: '167 Rozella Villages Parker Highway, Lake Lavonneborough, Illinois, 36019',
-        zipCode: 36019,
+        address: '27006 Friesen Inlet Zboncak Underpass, Wildermanburgh, Pennsylvania, 93372',
+        zipCode: 93372,
       },
       success: (result) => this.setState({
         addressSummary: result.addressSummary,
@@ -69,6 +69,18 @@ class HomeValueApp extends React.Component {
         }
       }
       bestimate /= this.state.similarAddresses.length;
+
+      let offMarketModelEstimate = 0;
+      let offMarketCount = 0;
+      // console.log(this.props.similarAddresses);
+      for (let i = 0; i < this.state.similarAddresses.length; i += 1) {
+        if (this.state.similarAddresses[i].on_market === "false") {
+          offMarketModelEstimate += this.state.similarAddresses[i].currentestimatedvalue;
+          offMarketCount += 1;
+        }
+      }
+      offMarketModelEstimate /= offMarketCount;
+
       return (
         // console.log('check if the content is fetched')
         <div className={styles.homeValueApp}>
@@ -105,7 +117,13 @@ class HomeValueApp extends React.Component {
             {/* homeSummary:
             {JSON.stringify(this.state.similarAddresses)} */}
             {/* << */}
+            <div className={styles.offMarketModel}>
+              <div className={styles.offMarketModelTitle}><img className={styles.iconWithSpace} src="iconfinder_m-21_4230540.svg"></img>Off-market model</div>
+              <div className={styles.offMarketModelExplaination}>Estimated value of this home if it was not for sale — excluding on-market information like list price, listing description and days on the market </div>
+              <div className={styles.offMarketModelValue}>${new Intl.NumberFormat().format(parseInt(offMarketModelEstimate))}</div>
+            </div>
           </div>
+
         </div>
       );
     } else {
