@@ -8,3 +8,4 @@ coverage/
 bundledIndex.js
 # fake data
 fakeData/
+dbconfig.js
