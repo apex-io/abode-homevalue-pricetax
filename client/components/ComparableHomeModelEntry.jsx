@@ -42,7 +42,7 @@ class ComparableHomeModelEntry extends React.Component {
       <div className={styles.ComparableHomeModelEntry} onClick={this.onClickHandler}>
         {/* <div>Address: {this.props.addressSummary.address}</div> */}
         <div className={styles.upperSide}>
-          <img className={styles.image} src="https://photos.zillowstatic.com/p_h/ISbd8ki9klk0ki1000000000.jpg"></img>
+          <img className={styles.image} src={this.props.addressSummary.pictureurl}></img>
           <img className={styles.heart} src="heart.svg"></img>
         </div>
         <div className={styles.homeSummary}>
