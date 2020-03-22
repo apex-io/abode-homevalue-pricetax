@@ -12,6 +12,12 @@
   line-height: 23px;
 }
 
+.iconWithSpace {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
 .comparableHomeModelExplaination {
   font-weight: 400;
   font-size: 14px;
@@ -32,4 +38,17 @@
   column-gap: 16px;
   row-gap: 16px;
   grid-template-columns: auto auto;
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+}
+
+.showMore {
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 22.5px;
+  color: #006aff;
 }
