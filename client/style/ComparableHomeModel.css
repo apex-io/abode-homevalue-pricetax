@@ -47,6 +47,8 @@
 }
 
 .showMore {
+  display: block;
+  margin: 16px 16px 0px 0px;
   cursor: pointer;
   font-size: 15px;
   line-height: 22.5px;
