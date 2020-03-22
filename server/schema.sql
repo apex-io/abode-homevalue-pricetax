@@ -13,6 +13,7 @@ CREATE TABLE addresses (
   bed INT(2),
   bath INT(2),
   currentestimatedvalue INT(15),
+  pictureurl VARCHAR(100),
   PRIMARY KEY (id)
 );
 
