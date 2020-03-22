@@ -53,7 +53,7 @@ class ComparableHomeModel extends React.Component {
     // test if comparableEstimate is a calculated to be an appropriate number
     return (
       <div className={styles.comparableHomeModel}>
-        <div className={styles.comparableHomeModelTitle}><img className={styles.iconWithSpace} src="iconfinder_House_4265801.svg"></img>Comparable Home Model</div>
+        <div className={styles.comparableHomeModelTitle}><img className={styles.iconWithSpace} src="iconfinder_House_4265801.svg"></img>Comparable home model</div>
         <div className={styles.comparableHomeModelExplaination}>Estimated value of this home based on local comparable homes </div>
         <div className={styles.comparableHomeModelValue}>${new Intl.NumberFormat().format(parseInt(comparableEstimate))}</div>
         <div className={styles.comparableHomeModelEntries}>
