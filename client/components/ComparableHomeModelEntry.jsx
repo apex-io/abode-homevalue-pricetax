@@ -1,5 +1,6 @@
 const React = require('react');
 import styles from '../style/ComparableHomeModelEntry.css';
+const SignInModal = require('./SignInModal.jsx').default;
 const $ = require('jquery');
 
 class ComparableHomeModelEntry extends React.Component {
@@ -7,14 +8,18 @@ class ComparableHomeModelEntry extends React.Component {
     super(props);
     if (this.props.addressSummary.on_market === 'true') {
       this.state = {
-        saleIcon: "Button_Icon_Red.svg"
+        saleIcon: "Button_Icon_Red.svg",
+        heartModal: {show: false}
       };
     } else {
       this.state = {
-        saleIcon: "Gray_Light_Icon.svg"
+        saleIcon: "Gray_Light_Icon.svg",
+        heartModal: {show: false}
       };
     }
     this.onClickHandler = this.onClickHandler.bind(this);
+    this.showHeartModal = this.showHeartModal.bind(this);
+    this.hideHeartModal = this.hideHeartModal.bind(this);
   }
 
   onClickHandler(event) {
@@ -35,6 +40,18 @@ class ComparableHomeModelEntry extends React.Component {
     event.preventDefault();
   }
 
+  hideHeartModal() {
+    this.setState({
+      heartModal: {show: false}
+    })
+  }
+
+  showHeartModal() {
+    this.setState({
+      heartModal: {show: true}
+    })
+  }
+
   render() {
     return (
       // test if the below render
@@ -43,7 +60,9 @@ class ComparableHomeModelEntry extends React.Component {
         {/* <div>Address: {this.props.addressSummary.address}</div> */}
         <div className={styles.upperSide}>
           <img className={styles.image} src={this.props.addressSummary.pictureurl}></img>
-          <img className={styles.heart} src="heart.svg"></img>
+          <div className={styles.heart} onClick={event => event.stopPropagation()}>
+            <img src="heart.svg" onClick={this.showHeartModal}></img>
+          </div>
         </div>
         <div className={styles.homeSummary}>
           <div className={styles.homeValue}>
@@ -62,6 +81,9 @@ class ComparableHomeModelEntry extends React.Component {
             <span className={styles.detailNumber}>{this.props.addressSummary.sqft}</span> <span> sqft</span>
           </div>
         </div>
+
+        <SignInModal show={this.state.heartModal.show} handleClose={this.hideHeartModal} handleOpen={this.showHeartModal} />
+
       </div>
     );
   }
