@@ -2,6 +2,8 @@ const React = require('react');
 const $ = require('jquery');
 const ComparableHomeModel = require('./ComparableHomeModel.jsx').default;
 import styles from '../style/HomeValueApp.css';
+const BestimateModal = require('./BestimateModal.jsx').default;
+const BestimateRangeModal = require('./BestimateRangeModal.jsx').default;
 
 class HomeValueApp extends React.Component {
   constructor(props) {
@@ -12,9 +14,15 @@ class HomeValueApp extends React.Component {
       similarAddresses: 'requet data',
       hasData: false,
       showEstimateModels: { visibility: 'hidden' },
+      bestimateModal: {show: false},
+      bestimateSaleRangeModal: {show: false},
     };
     this.onClickHandler = this.onClickHandler.bind(this);
     this.onClickNewAddressHandler = this.onClickNewAddressHandler.bind(this);
+    this.showBestimateModal = this.showBestimateModal.bind(this);
+    this.hideBestimateModal = this.hideBestimateModal.bind(this);
+    this.showBestimateSaleRangeModal = this.showBestimateSaleRangeModal.bind(this);
+    this.hideBestimateSaleRangeModal = this.hideBestimateSaleRangeModal.bind(this);
   }
 
   componentDidMount() {
@@ -53,6 +61,34 @@ class HomeValueApp extends React.Component {
     });
   }
 
+  showBestimateModal(event) {
+    this.setState({
+      bestimateModal: { show: true }
+    });
+    event.preventDefault();
+  }
+
+  hideBestimateModal(event) {
+    this.setState({
+      bestimateModal: { show: false }
+    });
+    event.preventDefault();
+  }
+
+  showBestimateSaleRangeModal(event) {
+    this.setState({
+      bestimateSaleRangeModal: { show: true }
+    });
+    event.preventDefault();
+  }
+
+  hideBestimateSaleRangeModal(event) {
+    this.setState({
+      bestimateSaleRangeModal: { show: false }
+    });
+    event.preventDefault();
+  }
+
   render() {
     if (this.state.hasData) {
       // console.log(this.state);
@@ -88,10 +124,16 @@ class HomeValueApp extends React.Component {
           <div>
             <div className={styles.bestimateSection}>
               <div className={styles.bestimate}>
-                <div className={styles.bestimateTrademark}>Bestimate</div>
+                <div className={styles.bestimateTrademark} onClick={this.showBestimateModal}>Bestimate</div>
+
+                <BestimateModal show={this.state.bestimateModal.show} handleClose={this.hideBestimateModal} handleOpen={this.showBestimateModal} />
+
                 <div className={styles.bestimateNumber}>${new Intl.NumberFormat().format(parseInt(bestimate))}</div>
               </div>
-              <div className={styles.bestimateRange}>Bestimate sale range: ${new Intl.NumberFormat().format(bestimateRangeLow)} - ${new Intl.NumberFormat().format(bestimateRangeHigh)}</div>
+              <div className={styles.bestimateRange}><span className={styles.bestimateRangeValues} onClick={this.showBestimateSaleRangeModal}>Bestimate sale range: ${new Intl.NumberFormat().format(bestimateRangeLow)} - ${new Intl.NumberFormat().format(bestimateRangeHigh)}</span></div>
+
+              <BestimateRangeModal show={this.state.bestimateSaleRangeModal.show} handleClose={this.hideBestimateSaleRangeModal} handleOpen={this.showBestimateSaleRangeModal} />
+
             </div>
           </div>
           <button onClick={this.onClickHandler} className={styles.showEstimateModelsButton}><img className={styles.icon} src="down-arrow.svg"></img>See more estimated models</button>
