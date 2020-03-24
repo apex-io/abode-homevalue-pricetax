@@ -30,8 +30,8 @@ class HomeValueApp extends React.Component {
       type: 'get',
       url: '/exampleHomeSummary/',
       data: {
-        address: '27006 Friesen Inlet Zboncak Underpass, Wildermanburgh, Pennsylvania, 93372',
-        zipCode: 93372,
+        address: 'initial query',
+        zipCode: 12345,
       },
       success: (result) => this.setState({
         addressSummary: result.addressSummary,
