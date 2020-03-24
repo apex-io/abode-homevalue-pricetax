@@ -3,8 +3,15 @@ const { db } = require('./db');
 const model = {};
 
 model.getExampleAddressesData = (query, callback) => {
-  const queryString = 'SELECT * FROM addresses WHERE address = ?';
-  const addressToSearch = [query.address];
+  let queryString;
+  let addressToSearch;
+  if (query.address === 'initial query') {
+    queryString = 'SELECT * FROM addresses WHERE id = ?';
+    addressToSearch = 1;
+  } else {
+    queryString = 'SELECT * FROM addresses WHERE address = ?';
+    addressToSearch = [query.address];
+  }
   const randomizeZipcode = Math.random() * 100000; // do this so the result is more spread out rather then clustered in one area
   const zipCodeToSearch = [randomizeZipcode, randomizeZipcode];
   db.query(queryString, addressToSearch, (errorFromAddressesQuery, address) => {
@@ -13,6 +20,9 @@ model.getExampleAddressesData = (query, callback) => {
       callback(errorFromAddressesQuery, null);
     } else {
       console.log('The result from address query is:', address);
+      if (query.address === 'initial query') {
+        addressToSearch = JSON.parse(JSON.stringify(address))[0].address;
+      }
       const queryString = 'SELECT * FROM estimated_value_history WHERE address = ?';
       db.query(queryString, addressToSearch, (errorFromHomeValueQuery, homeValue) => {
         if (errorFromHomeValueQuery) {
