@@ -1,6 +1,6 @@
 const faker = require('faker');
 const fs = require('fs');
-const pictureURL = require('./dbconfig/dbconfig');
+const pictureURL = 'https://abodeproject.s3.us-east-2.amazonaws.com/address';
 
 const addresses = {
   address: [],
