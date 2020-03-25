@@ -1,5 +1,9 @@
-const React = require('react');
-import styles from '../style/BestimateModal.css'
+import React from 'react';
+import styles from '../style/BestimateModal.css';
+import walkingIcon from '../../public/walking.svg';
+import houseIcon from '../../public/house.png';
+import eyeIcon from '../../public/eye.svg';
+import listingIcon from '../../public/listing.svg';
 
 const BestimateModal = (props) => {
   const showHideClassname = props.show === true ? `${styles.modal} ${styles.displayBlock}` : `${styles.modal} ${styles.displayNone}`;
@@ -11,12 +15,12 @@ const BestimateModal = (props) => {
         <p>The Zestimate incorporates multiple data models and responds to factors like:</p>
         <div>
           <div className={styles.factorsRow}>
-            <span className={styles.factor}><img src="walking.svg" className={styles.iconWithSpace}></img>Neighborhood details</span>
-            <span className={styles.factor}><img src="house.png" className={styles.iconWithSpace}></img>Home facts</span>
+            <span className={styles.factor}><img src={walkingIcon} className={styles.iconWithSpace}></img>Neighborhood details</span>
+            <span className={styles.factor}><img src={houseIcon} className={styles.iconWithSpace}></img>Home facts</span>
           </div>
           <div className={styles.factorsRow}>
-            <span className={styles.factor}><img src="eye.svg" className={styles.iconWithSpace}></img>Popularity on Zillow</span>
-            <span className={styles.factor}><img src="listing.svg" className={styles.iconWithSpace}></img>Listing price</span>
+            <span className={styles.factor}><img src={eyeIcon} className={styles.iconWithSpace}></img>Popularity on Zillow</span>
+            <span className={styles.factor}><img src={listingIcon} className={styles.iconWithSpace}></img>Listing price</span>
           </div>
         </div>
         <button onClick={props.handleClose} className={styles.closeButton}>X</button>

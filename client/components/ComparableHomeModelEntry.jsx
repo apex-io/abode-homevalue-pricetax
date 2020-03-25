@@ -1,19 +1,22 @@
-const React = require('react');
+import React from 'react';
+import $ from 'jquery';
+import SignInModal from './SignInModal.jsx';
 import styles from '../style/ComparableHomeModelEntry.css';
-const SignInModal = require('./SignInModal.jsx').default;
-const $ = require('jquery');
+import redIcon from '../../public/Button_Icon_Red.svg';
+import grayIcon from '../../public/Gray_Light_Icon.svg';
+import heartIcon from '../../public/heart.svg';
 
 class ComparableHomeModelEntry extends React.Component {
   constructor(props) {
     super(props);
     if (this.props.addressSummary.on_market === 'true') {
       this.state = {
-        saleIcon: "Button_Icon_Red.svg",
+        saleIcon: redIcon,
         heartModal: {show: false}
       };
     } else {
       this.state = {
-        saleIcon: "Gray_Light_Icon.svg",
+        saleIcon: grayIcon,
         heartModal: {show: false}
       };
     }
@@ -61,7 +64,7 @@ class ComparableHomeModelEntry extends React.Component {
         <div className={styles.upperSide}>
           <img className={styles.image} src={this.props.addressSummary.pictureurl}></img>
           <div className={styles.heart} onClick={event => event.stopPropagation()}>
-            <img src="heart.svg" onClick={this.showHeartModal}></img>
+            <img src={heartIcon} onClick={this.showHeartModal}></img>
           </div>
         </div>
         <div className={styles.homeSummary}>

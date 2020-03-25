@@ -1,5 +1,8 @@
-const React = require('react');
+import React from 'react';
 import styles from '../style/SignInModal.css';
+import appleIcon from '../../public/apple.svg';
+import fbIcon from '../../public/fb.svg';
+import googleIcon from '../../public/google.svg';
 
 class SignInModal extends React.Component {
   constructor(props) {
@@ -36,9 +39,9 @@ class SignInModal extends React.Component {
             </form>
             <div className={styles.socialVerify}>
               <span className={styles.socialVerifyInstruction}>Or connect with:</span>
-              <button className={styles.verifierApple}><img src="apple.svg" className={styles.icon}></img>Continue with Apple</button>
-              <button className={styles.verifierFb}><img src="fb.svg" className={styles.icon}></img>Continue with Facebook</button>
-              <button className={styles.verifierGoogle}><img src="google.svg" className={styles.icon}></img>Continue with Google</button>
+              <button className={styles.verifierApple}><img src={appleIcon} className={styles.icon}></img>Continue with Apple</button>
+              <button className={styles.verifierFb}><img src={fbIcon} className={styles.icon}></img>Continue with Facebook</button>
+              <button className={styles.verifierGoogle}><img src={googleIcon} className={styles.icon}></img>Continue with Google</button>
             </div>
             <button onClick={this.props.handleClose} className={styles.closeButton}>X</button>
           </section>
