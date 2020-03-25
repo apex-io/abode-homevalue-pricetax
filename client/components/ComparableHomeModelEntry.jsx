@@ -2,9 +2,9 @@ import React from 'react';
 import $ from 'jquery';
 import SignInModal from './SignInModal.jsx';
 import styles from '../style/ComparableHomeModelEntry.css';
-import redIcon from '../../public/Button_Icon_Red.svg';
-import grayIcon from '../../public/Gray_Light_Icon.svg';
-import heartIcon from '../../public/heart.svg';
+import redIcon from '../../public/icons/Button_Icon_Red.svg';
+import grayIcon from '../../public/icons/Gray_Light_Icon.svg';
+import heartIcon from '../../public/icons/heart.svg';
 
 class ComparableHomeModelEntry extends React.Component {
   constructor(props) {
