@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from '../style/SignInModal.css';
-import appleIcon from '../../public/apple.svg';
-import fbIcon from '../../public/fb.svg';
-import googleIcon from '../../public/google.svg';
+import appleIcon from '../../public/icons/apple.svg';
+import fbIcon from '../../public/icons/fb.svg';
+import googleIcon from '../../public/icons/google.svg';
 
 class SignInModal extends React.Component {
   constructor(props) {

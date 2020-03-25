@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from '../style/BestimateModal.css';
-import walkingIcon from '../../public/walking.svg';
-import houseIcon from '../../public/house.png';
-import eyeIcon from '../../public/eye.svg';
-import listingIcon from '../../public/listing.svg';
+import walkingIcon from '../../public/icons/walking.svg';
+import houseIcon from '../../public/icons/iconfinder_House_4265801.svg';
+import eyeIcon from '../../public/icons/eye.svg';
+import listingIcon from '../../public/icons/listing.svg';
 
 const BestimateModal = (props) => {
   const showHideClassname = props.show === true ? `${styles.modal} ${styles.displayBlock}` : `${styles.modal} ${styles.displayNone}`;

@@ -1,9 +1,9 @@
 import React from 'react';
 import ComparableHomeModelEntry from './ComparableHomeModelEntry.jsx';
 import styles from '../style/ComparableHomeModel.css'
-import downArrowIcon from '../../public/down-arrow.svg';
-import upArrowIcon from '../../public/up-arrow.png';
-import homeIcon from '../../public/iconfinder_House_4265801.svg';
+import downArrowIcon from '../../public/icons/down-arrow.svg';
+import upArrowIcon from '../../public/icons/upArrow.svg';
+import homeIcon from '../../public/icons/iconfinder_House_4265801.svg';
 
 class ComparableHomeModel extends React.Component {
   constructor(props) {

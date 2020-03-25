@@ -4,9 +4,9 @@ import ComparableHomeModel from './ComparableHomeModel.jsx'
 import BestimateRangeModal from './BestimateRangeModal.jsx';
 import BestimateModal from './BestimateModal.jsx';
 import styles from '../style/HomeValueApp.css';
-import downArrowIcon from '../../public/down-arrow.svg';
-import houseIcon from '../../public/iconfinder_House_4265801.svg';
-import marketIcon from '../../public/iconfinder_m-21_4230540.svg';
+import downArrowIcon from '../../public/icons/down-arrow.svg';
+import houseIcon from '../../public/icons/iconfinder_House_4265801.svg';
+import marketIcon from '../../public/icons/iconfinder_m-21_4230540.svg';
 
 class HomeValueApp extends React.Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class HomeValueApp extends React.Component {
       addressValues: 'request data',
       similarAddresses: 'requet data',
       hasData: false,
-      showEstimateModels: { visibility: 'hidden' },
+      showEstimateModels: false,
       bestimateModal: {show: false},
       bestimateSaleRangeModal: {show: false},
     };
@@ -47,10 +47,10 @@ class HomeValueApp extends React.Component {
 
   // test onclick targetting the right 'this'
   onClickHandler(event) {
-    if (this.state.showEstimateModels.visibility === 'hidden') {
-      this.setState({ showEstimateModels: { visibility: 'visible' } });
-    } else if (this.state.showEstimateModels.visibility === 'visible') {
-      this.setState({ showEstimateModels: { visibility: 'hidden' } });
+    if (this.state.showEstimateModels === false) {
+      this.setState({ showEstimateModels: true });
+    } else if (this.state.showEstimateModels === true) {
+      this.setState({ showEstimateModels: false });
     }
     event.preventDefault();
   }
@@ -120,6 +120,43 @@ class HomeValueApp extends React.Component {
       }
       offMarketModelEstimate /= offMarketCount;
 
+      let showEstimateModels;
+      if (this.state.showEstimateModels) {
+        showEstimateModels = (
+          <div className={styles.bestimateModelsSection}>
+          <div>
+            <div className={styles.bestimateModelTitle}>Bestimate models</div>
+            <div className={styles.bestimateModelExplaination}>The Bestimate uses a set of data models to estimate this home's value.</div>
+            <div className={styles.differentModels}>
+              <span className={styles.modelNames}>
+                <img className={styles.iconWithSpace} src={houseIcon}></img>
+                <span> Comparable homes</span>
+              </span>
+              <span className={styles.modelNames}>
+                <img className={styles.iconWithSpace} src={marketIcon}></img>
+                <span> Off-market model</span>
+              </span>
+            </div>
+          </div>
+          {/* for test: show the component below rendered and if the error is at this level or at the child level */}
+          <ComparableHomeModel similarAddresses={this.state.similarAddresses} onClickNewAddressHandler={this.onClickNewAddressHandler} />
+          {/* add the below portion into a test >> */}
+          {/* homeSummary:
+          {JSON.stringify(this.state.similarAddresses)} */}
+          {/* << */}
+          <div className={styles.offMarketModel}>
+            <div className={styles.offMarketModelTitle}><img className={styles.iconWithSpace} src={marketIcon}></img>Off-market model</div>
+            <div className={styles.offMarketModelExplaination}>Estimated value of this home if it was not for sale — excluding on-market information like list price, listing description and days on the market </div>
+            <div className={styles.offMarketModelValue}>${new Intl.NumberFormat().format(parseInt(offMarketModelEstimate))}</div>
+          </div>
+        </div>
+        )
+      } else {
+        showEstimateModels = (
+          <div></div>
+        )
+      }
+
       return (
         // console.log('check if the content is fetched')
         <div className={styles.homeValueApp}>
@@ -141,33 +178,8 @@ class HomeValueApp extends React.Component {
           </div>
           <button onClick={this.onClickHandler} className={styles.showEstimateModelsButton}><img className={styles.icon} src={downArrowIcon}></img>See more estimated models</button>
           
-          <div style={this.state.showEstimateModels} className={styles.bestimateModelsSection}>
-            <div>
-              <div className={styles.bestimateModelTitle}>Bestimate models</div>
-              <div className={styles.bestimateModelExplaination}>The Bestimate uses a set of data models to estimate this home's value.</div>
-              <div className={styles.differentModels}>
-                <span className={styles.modelNames}>
-                  <img className={styles.iconWithSpace} src={houseIcon}></img>
-                  <span> Comparable homes</span>
-                </span>
-                <span className={styles.modelNames}>
-                  <img className={styles.iconWithSpace} src={marketIcon}></img>
-                  <span> Off-market model</span>
-                </span>
-              </div>
-            </div>
-            {/* for test: show the component below rendered and if the error is at this level or at the child level */}
-            <ComparableHomeModel similarAddresses={this.state.similarAddresses} onClickNewAddressHandler={this.onClickNewAddressHandler} />
-            {/* add the below portion into a test >> */}
-            {/* homeSummary:
-            {JSON.stringify(this.state.similarAddresses)} */}
-            {/* << */}
-            <div className={styles.offMarketModel}>
-              <div className={styles.offMarketModelTitle}><img className={styles.iconWithSpace} src={marketIcon}></img>Off-market model</div>
-              <div className={styles.offMarketModelExplaination}>Estimated value of this home if it was not for sale — excluding on-market information like list price, listing description and days on the market </div>
-              <div className={styles.offMarketModelValue}>${new Intl.NumberFormat().format(parseInt(offMarketModelEstimate))}</div>
-            </div>
-          </div>
+          {showEstimateModels}
+
 
         </div>
       );
