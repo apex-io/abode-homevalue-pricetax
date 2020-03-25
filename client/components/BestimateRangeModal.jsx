@@ -1,5 +1,5 @@
-const React = require('react');
-import styles from '../style/BestimateRangeModal.css'
+import React from 'react';
+import styles from '../style/BestimateRangeModal.css';
 
 const BestimateRangeModal = (props) => {
   const showHideClassname = props.show === true ? `${styles.modal} ${styles.displayBlock}` : `${styles.modal} ${styles.displayNone}`;

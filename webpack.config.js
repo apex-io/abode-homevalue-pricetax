@@ -24,6 +24,18 @@ module.exports = {
           modules: true,
         },
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-url-loader',
+      },
     ],
   },
 };

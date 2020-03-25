@@ -1,6 +1,9 @@
-const React = require('react');
-const ComparableHomeModelEntry = require('./ComparableHomeModelEntry.jsx').default;
+import React from 'react';
+import ComparableHomeModelEntry from './ComparableHomeModelEntry.jsx';
 import styles from '../style/ComparableHomeModel.css'
+import downArrowIcon from '../../public/down-arrow.svg';
+import upArrowIcon from '../../public/up-arrow.png';
+import homeIcon from '../../public/iconfinder_House_4265801.svg';
 
 class ComparableHomeModel extends React.Component {
   constructor(props) {
@@ -8,7 +11,7 @@ class ComparableHomeModel extends React.Component {
     this.state = {
       showMore: false,
       showText: 'Show more',
-      showIcon: 'down-arrow.svg'
+      showIcon: downArrowIcon,
     };
     this.onShowMoreClickHandle = this.onShowMoreClickHandle.bind(this);
     this.onClickNewAddressShowMoreHandler = this.onClickNewAddressShowMoreHandler.bind(this);
@@ -19,13 +22,13 @@ class ComparableHomeModel extends React.Component {
       this.setState({
         showMore: false,
         showText: 'Show more',
-        showIcon: 'down-arrow.svg'
+        showIcon: downArrowIcon,
       });
     } else {
       this.setState({
         showMore: true,
         showText: 'Show less',
-        showIcon: 'up-arrow.png'
+        showIcon: upArrowIcon
       });
     }
     event.preventDefault();
@@ -35,7 +38,7 @@ class ComparableHomeModel extends React.Component {
     this.setState({
       showMore: false,
       showText: 'Show more',
-      showIcon: 'down-arrow.svg'
+      showIcon: downArrowIcon,
     });
   }
 
@@ -53,7 +56,7 @@ class ComparableHomeModel extends React.Component {
     // test if comparableEstimate is a calculated to be an appropriate number
     return (
       <div className={styles.comparableHomeModel}>
-        <div className={styles.comparableHomeModelTitle}><img className={styles.iconWithSpace} src="iconfinder_House_4265801.svg"></img>Comparable home model</div>
+        <div className={styles.comparableHomeModelTitle}><img className={styles.iconWithSpace} src={homeIcon}></img>Comparable home model</div>
         <div className={styles.comparableHomeModelExplaination}>Estimated value of this home based on local comparable homes </div>
         <div className={styles.comparableHomeModelValue}>${new Intl.NumberFormat().format(parseInt(comparableEstimate))}</div>
         <div className={styles.comparableHomeModelEntries}>

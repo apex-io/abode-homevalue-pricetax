@@ -1,9 +1,12 @@
-const React = require('react');
-const $ = require('jquery');
-const ComparableHomeModel = require('./ComparableHomeModel.jsx').default;
+import $ from 'jquery';
+import React from 'react';
+import ComparableHomeModel from './ComparableHomeModel.jsx'
+import BestimateRangeModal from './BestimateRangeModal.jsx';
+import BestimateModal from './BestimateModal.jsx';
 import styles from '../style/HomeValueApp.css';
-const BestimateModal = require('./BestimateModal.jsx').default;
-const BestimateRangeModal = require('./BestimateRangeModal.jsx').default;
+import downArrowIcon from '../../public/down-arrow.svg';
+import houseIcon from '../../public/iconfinder_House_4265801.svg';
+import marketIcon from '../../public/iconfinder_m-21_4230540.svg';
 
 class HomeValueApp extends React.Component {
   constructor(props) {
@@ -136,7 +139,7 @@ class HomeValueApp extends React.Component {
 
             </div>
           </div>
-          <button onClick={this.onClickHandler} className={styles.showEstimateModelsButton}><img className={styles.icon} src="down-arrow.svg"></img>See more estimated models</button>
+          <button onClick={this.onClickHandler} className={styles.showEstimateModelsButton}><img className={styles.icon} src={downArrowIcon}></img>See more estimated models</button>
           
           <div style={this.state.showEstimateModels} className={styles.bestimateModelsSection}>
             <div>
@@ -144,11 +147,11 @@ class HomeValueApp extends React.Component {
               <div className={styles.bestimateModelExplaination}>The Bestimate uses a set of data models to estimate this home's value.</div>
               <div className={styles.differentModels}>
                 <span className={styles.modelNames}>
-                  <img className={styles.iconWithSpace} src="iconfinder_House_4265801.svg"></img>
+                  <img className={styles.iconWithSpace} src={houseIcon}></img>
                   <span> Comparable homes</span>
                 </span>
                 <span className={styles.modelNames}>
-                  <img className={styles.iconWithSpace} src="iconfinder_m-21_4230540.svg"></img>
+                  <img className={styles.iconWithSpace} src={marketIcon}></img>
                   <span> Off-market model</span>
                 </span>
               </div>
@@ -160,7 +163,7 @@ class HomeValueApp extends React.Component {
             {JSON.stringify(this.state.similarAddresses)} */}
             {/* << */}
             <div className={styles.offMarketModel}>
-              <div className={styles.offMarketModelTitle}><img className={styles.iconWithSpace} src="iconfinder_m-21_4230540.svg"></img>Off-market model</div>
+              <div className={styles.offMarketModelTitle}><img className={styles.iconWithSpace} src={marketIcon}></img>Off-market model</div>
               <div className={styles.offMarketModelExplaination}>Estimated value of this home if it was not for sale — excluding on-market information like list price, listing description and days on the market </div>
               <div className={styles.offMarketModelValue}>${new Intl.NumberFormat().format(parseInt(offMarketModelEstimate))}</div>
             </div>
