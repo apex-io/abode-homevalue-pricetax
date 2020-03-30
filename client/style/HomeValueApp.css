@@ -72,6 +72,16 @@
   cursor: pointer;
 }
 
+.showEstimateModelsButton:hover {
+  border-width: 0px;
+  outline: none;
+  margin: 32px 16px 0px;
+  font-size: 15px;
+  line-height: 22.5px;
+  color: #90b1df;
+  cursor: pointer;
+}
+
 .bestimateModelsSection {
   font-size: 15px;
   line-height: 22.5px;
