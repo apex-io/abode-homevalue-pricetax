@@ -1,13 +1,14 @@
 # Abode
+- [Product page](http://3.135.19.247/)
 - Module: Home Value:
 - Usage: This module is used to replicate Zillow's Home Value feature.
 - Instruction: follow the instructions in the Table of Contents in sequential order.
 
 
 # Table of Contents
-- Requirements
+- Development requirements
 - Environment set up
-- Data creation
+- Data creation and seeding
 - Build the bundle file
 - Server set up
 - Accessing the service
