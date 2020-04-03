@@ -69,12 +69,12 @@ class ComparableHomeModelEntry extends React.Component {
         </div>
         <div className={styles.homeSummary}>
           <div className={styles.homeValue}>
-            <div>${new Intl.NumberFormat().format(this.props.addressSummary.currentestimatedvalue)}</div>
+            <div>${new Intl.NumberFormat().format(this.props.addressSummary.listingValue)}</div>
             <div className={styles.forSale}>
               <img className={styles.icon} src={this.state.saleIcon}></img></div>
           </div>
           <div className={styles.homeValuePerSqft}>
-            ${new Intl.NumberFormat().format((this.props.addressSummary.currentestimatedvalue / this.props.addressSummary.sqft).toFixed(2))}/sqft
+            ${new Intl.NumberFormat().format((this.props.addressSummary.listingValue / this.props.addressSummary.sqft).toFixed(2))}/sqft
             </div>
           <div className={styles.homeDetails}>
             <span className={styles.detailNumber}>{this.props.addressSummary.bed}</span> <span> bd</span>

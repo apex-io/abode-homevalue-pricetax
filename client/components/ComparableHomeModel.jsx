@@ -48,7 +48,7 @@ class ComparableHomeModel extends React.Component {
     // console.log(this.props.similarAddresses);
     for (let i = 0; i < this.props.similarAddresses.length; i += 1) {
       if (this.props.similarAddresses[i].on_market === "true") {
-        comparableEstimate += this.props.similarAddresses[i].currentestimatedvalue;
+        comparableEstimate += this.props.similarAddresses[i].listingValue;
         onMarketCount += 1;
       }
     }

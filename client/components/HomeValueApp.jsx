@@ -96,15 +96,15 @@ class HomeValueApp extends React.Component {
     if (this.state.hasData) {
       // console.log(this.state);
       let bestimate = 0;
-      let bestimateRangeLow = this.state.addressSummary.currentestimatedvalue;
-      let bestimateRangeHigh = this.state.addressSummary.currentestimatedvalue;
+      let bestimateRangeLow = this.state.addressSummary.listingValue;
+      let bestimateRangeHigh = this.state.addressSummary.listingValue;
       for (let i = 0; i < this.state.similarAddresses.length; i += 1) {
-        bestimate += this.state.similarAddresses[i].currentestimatedvalue;
-        if (this.state.similarAddresses[i].currentestimatedvalue < bestimateRangeLow) {
-          bestimateRangeLow = this.state.similarAddresses[i].currentestimatedvalue;
+        bestimate += this.state.similarAddresses[i].listingValue;
+        if (this.state.similarAddresses[i].listingValue < bestimateRangeLow) {
+          bestimateRangeLow = this.state.similarAddresses[i].listingValue;
         }
-        if (this.state.similarAddresses[i].currentestimatedvalue > bestimateRangeHigh) {
-          bestimateRangeHigh = this.state.similarAddresses[i].currentestimatedvalue;
+        if (this.state.similarAddresses[i].listingValue > bestimateRangeHigh) {
+          bestimateRangeHigh = this.state.similarAddresses[i].listingValue;
         }
       }
       bestimate /= this.state.similarAddresses.length;
@@ -114,7 +114,7 @@ class HomeValueApp extends React.Component {
       // console.log(this.props.similarAddresses);
       for (let i = 0; i < this.state.similarAddresses.length; i += 1) {
         if (this.state.similarAddresses[i].on_market === "false") {
-          offMarketModelEstimate += this.state.similarAddresses[i].currentestimatedvalue;
+          offMarketModelEstimate += this.state.similarAddresses[i].listingValue;
           offMarketCount += 1;
         }
       }
