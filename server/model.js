@@ -12,8 +12,8 @@ model.getExampleAddressesData = (query, callback) => {
     queryString = 'SELECT * FROM addresses WHERE address = ?';
     addressToSearch = [query.address];
   }
-  const randomizeZipcode = Math.random() * 100000; // do this so the result is more spread out rather then clustered in one area
-  const zipCodeToSearch = [randomizeZipcode, randomizeZipcode];
+  // const randomizeZipcode = Math.random() * 100000; // do this so the result is more spread out rather then clustered in one area
+  const zipCodeToSearch = [query.zipCode, query.zipCode];
   db.query(queryString, addressToSearch, (errorFromAddressesQuery, address) => {
     if (errorFromAddressesQuery) {
       console.log('There has been an error querying the database. The error is:', errorFromAddressesQuery);
@@ -29,7 +29,7 @@ model.getExampleAddressesData = (query, callback) => {
           console.log('There has been an error querying the addresses from the database. The error is:', errorFromHomeValueQuery);
           callback(errorFromHomeValueQuery, null);
         } else {
-          const queryString = 'SELECT * FROM addresses WHERE zipcode < (? + 500) && zipcode > (? - 500)';
+          const queryString = 'SELECT * FROM addresses WHERE zipcode < (? + 1000) && zipcode > (? - 1000)';
           db.query(queryString, zipCodeToSearch, (errorFromZipCodeQuery, addresses) => {
             const returnData = {
               addressSummary: address[0],
