@@ -10,7 +10,7 @@ const addresses = {
   bed: [],
   bath: [],
   addressesTableData: '',
-  currentEstimatedValue: [],
+  listingValue: [],
   picture: [],
 };
 
@@ -18,8 +18,6 @@ const valueHistory = {
   address: [],
   date: [],
   homeValue: [],
-  areaValue: [],
-  cityValue: [],
   centralValue: [],
   estimatedValueHistoryTableData: '',
 };
@@ -43,8 +41,6 @@ for (let i = 0; i < numberOfHouses; i += 1) {
   valueHistory.address.push(addresses.address[i]);
   valueHistory.date.push([]);
   valueHistory.homeValue.push([]);
-  valueHistory.areaValue.push([]);
-  valueHistory.cityValue.push([]);
   if (i === 0) {
     valueHistory.centralValue.push(200000);
   } else if (i % 10 === 0) {
@@ -66,36 +62,20 @@ for (let i = 0; i < numberOfHouses; i += 1) {
         min: valueHistory.homeValue[i][j - 1] * (98 / 100),
         max: valueHistory.homeValue[i][j - 1] * (102 / 100),
       }));
-      valueHistory.areaValue[i].push(faker.random.number({
-        min: valueHistory.homeValue[i][j] * (96 / 100),
-        max: valueHistory.homeValue[i][j] * (104 / 100),
-      }));
-      valueHistory.cityValue[i].push(faker.random.number({
-        min: valueHistory.homeValue[i][j] * (94 / 100),
-        max: valueHistory.homeValue[i][j] * (106 / 100),
-      }));
     } else {
       valueHistory.homeValue[i].push(faker.random.number({
         min: valueHistory.homeValue[i][j - 1] * (99.98 / 100),
         max: valueHistory.homeValue[i][j - 1] * (100.02 / 100),
-      }));
-      valueHistory.areaValue[i].push(faker.random.number({
-        min: valueHistory.homeValue[i][j] * (99.98 / 100),
-        max: valueHistory.homeValue[i][j] * (100.02 / 100),
-      }));
-      valueHistory.cityValue[i].push(faker.random.number({
-        min: valueHistory.homeValue[i][j] * (99.98 / 100),
-        max: valueHistory.homeValue[i][j] * (100.02 / 100),
       }));
     }
   }
 }
 for (let i = 0; i < numberOfHouses; i += 1) {
   valueHistory.date[i].sort(-1);
-  addresses.currentEstimatedValue.push(valueHistory.homeValue[numberOfValuesPerHouse - 1][i]);
-  addresses.addressesTableData += `"\\N"\t${addresses.address[i]}\t${addresses.zipCode[i]}\t${addresses.on_market[i]}\t${addresses.sqft[i]}\t${addresses.bed[i]}\t${addresses.bath[i]}\t${addresses.currentEstimatedValue[i]}\t${addresses.picture[i]}\n`;
+  addresses.listingValue.push(valueHistory.homeValue[numberOfValuesPerHouse - 1][i]);
+  addresses.addressesTableData += `"\\N"\t${addresses.address[i]}\t${addresses.zipCode[i]}\t${addresses.on_market[i]}\t${addresses.sqft[i]}\t${addresses.bed[i]}\t${addresses.bath[i]}\t${addresses.listingValue[i]}\t${addresses.picture[i]}\n`;
   for (let j = 0; j < numberOfValuesPerHouse; j += 1) {
-    valueHistory.estimatedValueHistoryTableData += `"\\N"\t${valueHistory.address[i]}\t${valueHistory.date[i][j]}\t${valueHistory.homeValue[j][i]}\t${valueHistory.areaValue[j][i]}\t${valueHistory.cityValue[j][i]}\t\n`;
+    valueHistory.estimatedValueHistoryTableData += `"\\N"\t${valueHistory.address[i]}\t${valueHistory.date[i][j]}\t${valueHistory.homeValue[j][i]}\t\n`;
   }
 }
 
