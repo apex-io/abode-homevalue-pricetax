@@ -12,7 +12,7 @@ CREATE TABLE addresses (
   sqft INT(4),
   bed INT(2),
   bath INT(2),
-  currentestimatedvalue INT(15),
+  listingValue INT(15),
   pictureurl VARCHAR(100),
   PRIMARY KEY (id)
 );
@@ -22,27 +22,25 @@ CREATE TABLE estimated_value_history (
   address VARCHAR(100),
   date DATE,
   estimated_home_value INT(15),
-  estimated_area_value INT(15),
-  estimated_city_value INT(15),
   PRIMARY KEY (id)
 );
 
-CREATE TABLE price_history (
-  id INT(10) AUTO_INCREMENT,
-  address_id INT(10),
-  event VARCHAR(25),
-  price INT(15),
-  source VARCHAR(25),
-  PRIMARY KEY (id)
-);
+-- CREATE TABLE price_history (
+--   id INT(10) AUTO_INCREMENT,
+--   address_id INT(10),
+--   event VARCHAR(25),
+--   price INT(15),
+--   source VARCHAR(25),
+--   PRIMARY KEY (id)
+-- );
 
-CREATE TABLE tax_history (
-  id INT(10) AUTO_INCREMENT,
-  address_id INT(10),
-  property_tax INT(15),
-  tax_assessment INT(15),
-  PRIMARY KEY (id)
-);
+-- CREATE TABLE tax_history (
+--   id INT(10) AUTO_INCREMENT,
+--   address_id INT(10),
+--   property_tax INT(15),
+--   tax_assessment INT(15),
+--   PRIMARY KEY (id)
+-- );
 
 -- to clear data && set schema in CLI:
 -- mysql -u root < server/schema.sql
